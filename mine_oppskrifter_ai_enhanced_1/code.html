@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+
+<html lang="nb"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mine Oppskrifter - Min kokebok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "surface-container": "#efeeeb",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#dac3a9",
+              "tertiary": "#6d5b46",
+              "surface-container-highest": "#e4e2df",
+              "error-container": "#ffdad6",
+              "on-surface": "#1b1c1a",
+              "surface": "#fbf9f6",
+              "inverse-primary": "#e7c095",
+              "inverse-surface": "#30312f",
+              "on-surface-variant": "#4e453c",
+              "on-primary-container": "#432c0c",
+              "surface-variant": "#e4e2df",
+              "secondary": "#6b5c4b",
+              "primary": "#765936",
+              "surface-container-low": "#f5f3f0",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#251909",
+              "inverse-on-surface": "#f2f0ed",
+              "error": "#ba1a1a",
+              "surface-container-high": "#eae8e5",
+              "secondary-container": "#f5dfc9",
+              "on-background": "#1b1c1a",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fbf9f6",
+              "on-secondary": "#ffffff",
+              "background": "#fbf9f6",
+              "primary-fixed-dim": "#e7c095",
+              "on-tertiary-fixed-variant": "#544430",
+              "on-secondary-fixed": "#24190c",
+              "on-primary-fixed": "#2b1700",
+              "tertiary-container": "#aa957d",
+              "surface-tint": "#765936",
+              "primary-fixed": "#ffddb8",
+              "outline": "#80756a",
+              "tertiary-fixed": "#f7dfc4",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#726250",
+              "secondary-fixed": "#f5dfc9",
+              "outline-variant": "#d2c4b8",
+              "on-tertiary-container": "#3c2e1c",
+              "on-secondary-fixed-variant": "#534434",
+              "surface-dim": "#dbdad7",
+              "secondary-fixed-dim": "#d8c3ae",
+              "primary-container": "#b5926a",
+              "on-primary-fixed-variant": "#5c4220"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .ai-shimmer {
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            background-size: 200% 100%;
+            animation: shimmer 2s infinite linear;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-stone-200/20 dark:border-stone-800/20 shadow-sm dark:shadow-none hidden md:block">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50">Min kokebok</div>
+<div class="flex items-center space-x-8">
+<a class="text-orange-800 dark:text-orange-300 border-b-2 border-orange-800 dark:border-orange-300 pb-1 font-medium font-serif italic tracking-tight transition-all duration-300 ease-in-out active:scale-95" href="#">Mine Oppskrifter</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-serif italic tracking-tight hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-md transition-all duration-300 ease-in-out active:scale-95" href="#">Oppdag Inspirasjon</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-serif italic tracking-tight hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-md transition-all duration-300 ease-in-out active:scale-95" href="#">Måltidsplan</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-serif italic tracking-tight hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-md transition-all duration-300 ease-in-out active:scale-95" href="#">Ny Oppskrift</a>
+<a class="text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors font-serif italic tracking-tight hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-md transition-all duration-300 ease-in-out active:scale-95" href="#">Handleliste</a>
+</div>
+<div class="flex items-center space-x-4">
+<button class="p-2 hover:bg-stone-100/50 dark:hover:bg-stone-800/50 rounded-md transition-all duration-300 ease-in-out active:scale-95">
+<span class="material-symbols-outlined text-stone-900 dark:text-stone-50" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile / Hidden on Desktop) -->
+<div class="md:hidden">
+<div class="fixed bottom-0 left-0 right-0 bg-stone-50 dark:bg-stone-950 border-t border-stone-200 dark:border-stone-800 flex justify-around items-center py-3 z-50">
+<button class="flex flex-col items-center text-orange-900 dark:text-orange-100">
+<span class="material-symbols-outlined" data-icon="book" style="font-variation-settings: 'FILL' 1;">book</span>
+<span class="text-[10px] font-serif mt-1">Mine</span>
+</button>
+<button class="flex flex-col items-center text-stone-500 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="text-[10px] font-serif mt-1">Oppdag</span>
+</button>
+<button class="flex flex-col items-center text-stone-500 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="text-[10px] font-serif mt-1">Ny</span>
+</button>
+<button class="flex flex-col items-center text-stone-500 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+<span class="text-[10px] font-serif mt-1">Handel</span>
+</button>
+<button class="flex flex-col items-center text-stone-500 dark:text-stone-400">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-serif mt-1">Profil</span>
+</button>
+</div>
+</div>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 md:pb-16 px-6 max-w-7xl mx-auto">
+<!-- Header Section -->
+<header class="mb-12 md:mb-16">
+<div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+<div>
+<p class="text-xs font-label uppercase tracking-[0.2em] text-on-surface-variant mb-2">DIN PERSONLIGE SAMLING</p>
+<h1 class="text-5xl md:text-7xl font-serif font-bold text-on-surface tracking-tight">Mine Oppskrifter</h1>
+</div>
+<div class="flex flex-col md:flex-row gap-4 w-full md:w-auto">
+<div class="relative w-full md:w-72">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline" data-icon="search">search</span>
+<input class="w-full bg-surface-container-low border-none focus:ring-1 focus:ring-primary py-4 pl-12 pr-4 rounded-lg font-body text-on-surface placeholder-on-surface-variant/50 transition-all" placeholder="Søk i arkivet..." type="text"/>
+</div>
+<!-- Magic Import Feature -->
+<button class="relative group flex items-center justify-center gap-3 px-6 py-4 bg-primary text-on-primary rounded-lg font-label font-bold overflow-hidden transition-all hover:bg-primary/90 active:scale-95 shadow-lg shadow-primary/20">
+<div class="absolute inset-0 ai-shimmer opacity-20 group-hover:opacity-40 pointer-events-none"></div>
+<span class="material-symbols-outlined text-xl" data-icon="auto_awesome">auto_awesome</span>
+<span class="whitespace-nowrap uppercase tracking-wider text-xs">Magic Import</span>
+<input accept="image/*" class="absolute inset-0 opacity-0 cursor-pointer" title="Last opp bilde av en oppskrift" type="file"/>
+</button>
+</div>
+</div>
+</header>
+<!-- AI-Curated Inspiration Banner -->
+<section class="mb-16">
+<div class="relative rounded-2xl overflow-hidden bg-surface-container-high aspect-[21/9] md:aspect-[3/1] flex items-center">
+<img alt="AI Food Inspiration" class="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-multiply" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEaMLnSZNrnOCyYsWXiDMX1zZAG7g0PZuAv_hBrmI1SZU2Zsqe0eQc57AL_QZazXuWAJTWUangXMuIm1NaecNdqOXJj-usbaYP3Q3wmxbXkiXJRKOtm9h6w3bmggY1fPxOAM7C4BdvENN83NsNCxcPq6bGB-h20w9QPBdOvXzQYrUrSxZtTSES9XGajFt8TJbV1QkPDbSBZTu0-PR78ryrtpmeQsmlnuvHjPuGzwjFHD4O-bXISMsOaA4npc-kCH4GI6QoaggifVc"/>
+<div class="relative z-10 p-8 md:p-12 max-w-2xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="sparkles">sparkles</span> AI-Curated for You
+                </span>
+</div>
+<h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-stone-900 leading-tight">Basert på dine smakspreferanser...</h2>
+<p class="text-stone-700 font-body mb-8 text-lg">Vi har satt sammen en liste med sesongens beste råvarer som matcher din forkjærlighet for asiatisk fusjon og plantebasert protein.</p>
+<button class="bg-stone-900 text-stone-50 px-8 py-4 rounded-full font-label text-sm font-bold flex items-center gap-2 hover:bg-stone-800 transition-all active:scale-95">
+                UTFORSK UTVALGET
+                <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<div class="absolute bottom-4 right-4 text-[10px] text-stone-500 font-label tracking-widest uppercase">Oppdatert i dag</div>
+</div>
+</section>
+<!-- Filters & Categories -->
+<section class="mb-12 overflow-x-auto">
+<div class="flex gap-3 pb-2 min-w-max">
+<button class="px-6 py-2 bg-primary text-on-primary rounded-full font-label text-sm font-medium hover:opacity-90 transition-all">Alle</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-medium hover:bg-surface-container-highest transition-all">Frokost</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-medium hover:bg-surface-container-highest transition-all">Middag</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-medium hover:bg-surface-container-highest transition-all">Baking</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-medium hover:bg-surface-container-highest transition-all">Dessert</button>
+<button class="px-6 py-2 bg-secondary-container text-on-secondary-container rounded-full font-label text-sm font-medium hover:bg-surface-container-highest transition-all">Sunt &amp; Raskt</button>
+<button class="ml-auto flex items-center gap-2 px-4 py-2 border-b border-outline-variant/20 font-label text-sm text-on-surface-variant hover:text-primary transition-all">
+<span class="material-symbols-outlined text-sm" data-icon="filter_list">filter_list</span>
+                    Sortering
+                </button>
+</div>
+</section>
+<!-- Recipe Grid (Responsive Editorial Bento) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+<!-- Card 1: Featured Asymmetric -->
+<article class="md:col-span-2 group relative overflow-hidden bg-surface-container-lowest rounded-xl transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="flex flex-col md:flex-row h-full">
+<div class="w-full md:w-3/5 h-64 md:h-auto overflow-hidden">
+<img alt="Sunn bolle" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwYncpC1wje_iI_DoC27PfaMus0dte4w7r6SkVFpKm4niw8h2hkXY7xMx8435ABxOcl6S2PwBXmseiifvutCFFFi5Agqg8qrlftS8-aA9uLH6zxvJNesk0fRv1Snwhlc1iAlYndsCt34QO6_y-cLFC6q6JlsNUPSU_9A-5nE8F6ENOpcF3GVtp99AUCS5JAwFG3ZwTFEo2jIC0sVhTQk4kgvllG7XT4SlpFAPEd44nafkLcuyrVEEW0QBdHwSaYIVALyJSpt9cn0o"/>
+</div>
+<div class="w-full md:w-2/5 p-8 flex flex-col justify-center bg-surface-container-lowest">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary mb-3">Middag • 25 min</span>
+<h3 class="text-3xl font-serif font-bold mb-4 leading-tight group-hover:text-primary transition-colors">Grønn Buddha Bowl med Tahini</h3>
+<p class="text-on-surface-variant font-body text-sm leading-relaxed mb-6">En perfekt balansert vegetarisk rett med sprø kikerter og fløyelsmyk dressing.</p>
+<div class="mt-auto flex items-center justify-between">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<button class="text-primary font-label text-sm font-bold flex items-center group/btn">
+                                SE OPPSKRIFT
+                                <span class="material-symbols-outlined text-sm ml-1 transition-transform group-hover/btn:translate-x-1" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Pizza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYWG9PiMgv6d07Y0HASizNyO9NF-0jHNDzLfiKEMxF3nFXNbRCHz0bup-fV1YuDuUjwm-iJiTBx4_qZgaE1x2MQGOF2_Sli3z-1UYiQ-UVix417YEhzSoBAf2VrcYNyu9aqFksJuvkJv5uLHEaqb0cylwsiXALCNOr9RzG178EYwXT25utjAMKlUOxfhLGB4eew_Su0nvxh6-xIlu3zo5k2JObt5eVDnEM-F8BADVZ75-xmHVDiGL3p4N2nlAnrODw-YbPxXpNxGc"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur px-3 py-1 rounded-full text-[10px] font-label font-bold tracking-tighter">NYHET</div>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Baking • 4 timer</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Hjemmelaget Surdeigspizza</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">4.9 (12 anmeldelser)</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Salat" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhptZb9exud5eo8eXhg5SkdZ_UrrWQtX8tkeSJoFrKDcYrCop8NQRNswMl8VXTD_Y4myeMDkGoctft9I7De2Pz6vBgAa9IRs8jCEtB30i2vX2SdxCU-MB9MZBMn2ltpCKwefmOHOCvCEl7bzAwzAo0u6QXd2-iPOmZa62iPU7MPRMoPbuUG-LE_Ar6HfBKTjhVEchnBN0AnVASH9ZsUn4yGMufD43qrFd7z3CG30tQxPCBgwn_vEWXubAMVaoBQfT9fYRNv7K4ye8"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Lunsj • 15 min</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Middelhavssalat med Feta</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">4.7 (8 anmeldelser)</span>
+</div>
+</div>
+</article>
+<!-- Card 4 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Biff" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgQOiK3_bP7enIYDVL5w8l341Mmx1dt-OpsIIacvRcUfE38EwUpIOIWzWNcaZsaBH_FQIaPT0bK5TTFZ_pMd9cvfddfyinhDKCAOqHmY3TgXAztV59NAPxquRjDlkxN2SZh98sgVVn_QU2WgyxZ4dPWenJropnnf2WO1TaKuoihNZIlsZjJHKX8XUKunGsMb9AEa5SbjZLgp7WF6q-x9D1hBRPSEjZrXrNjumKHw0kn6CTzI0upJpam4X5ack5Qo-5m4KH-VxFIao"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Middag • 40 min</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Rosmarinstekt Entrecôte</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">5.0 (24 anmeldelser)</span>
+</div>
+</div>
+</article>
+<!-- Card 5 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Toast" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ7jsWi7_pUSmrq-GHkSWUW1YJMWYJzFvUXg6ErOKxxhDSeHiOd_GDlpi3Q7rMgRHc84JsGpviBXnlm_-SqNvYxls80cG_fQBniBbfvWgH8hjFLTfIzZwtBoDspW6bsSZp1V3jToH5VQoimdZC49vuNDoGzFFCwXIbGSIPf28QSpBckhtGZrDjoRYI8LR0N1JXh0oHIvtj_jXvIEqCyy7x50WdNwjpwjt3XYnECD3vxjZLyRV42WbmM3OR3LmOq4Kp304Um27GeLw"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Frokost • 10 min</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Avokadotoast med Posjert Egg</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">4.8 (15 anmeldelser)</span>
+</div>
+</div>
+</article>
+<!-- Card 6: Editorial Quote Placeholder -->
+<article class="bg-surface-container-low rounded-xl p-8 flex flex-col justify-center items-center text-center border-2 border-dashed border-outline-variant/30">
+<span class="material-symbols-outlined text-4xl text-outline-variant mb-4" data-icon="add_circle">add_circle</span>
+<h3 class="text-xl font-serif font-bold mb-2">Ny Inspirasjon?</h3>
+<p class="text-sm font-body text-on-surface-variant mb-6">Har du funnet en ny favorittrett? Legg den til i din samling nå.</p>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-3 rounded-full font-label text-sm font-bold shadow-lg shadow-primary/20 active:scale-95 transition-all uppercase tracking-wider">Opprett manuelt</button>
+</article>
+<!-- Card 7 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Donuts" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAL6id6hZUGbod9s3wKgOgkRQckqBZLpFNvMwMiVGBExYeqyU5TbHT5Z3odroMCB3LmUMNHLG0gXAnB3L4mtKzHYfnJllS9mfz9nLNPfOTwkXqR8fuQFPv9p4zQaOg0J9kJ0Uvhwxuc-ty63HMz8tVXd2Ua-M6OZH36wAlGxRNMY0a25Ftbepguvp5bi8c9iiGSBCdIOKDMYhsko-6rGRH-xZtiYvi7fmEeqtx-IPd34Zsib3ROcUOKwI8htyjHhPOu2bNQJtnVg"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Dessert • 60 min</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Frityrstekte Vaniljedonuts</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">4.6 (5 anmeldelser)</span>
+</div>
+</div>
+</article>
+<!-- Card 8 -->
+<article class="bg-surface-container-lowest rounded-xl overflow-hidden group transition-all hover:translate-y-[-4px] shadow-sm">
+<div class="relative h-64 overflow-hidden">
+<img alt="Healthy Meal" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMyB6Ius06EtJVivkH_RzfCtOF00YYoN9wqT5UxhHakqT0chqCA4kAuqDINMYahwN8FEj9oW4tTXEl2uMPGUab_2h4zwtOAJ0IqCg70gqb5AMtRArHXuPvcaLtNC9ZtsXs-eG6G59jzrLcc6Ni6ghkHqQTo7nSg2jCGWeA2pGSe2mZA7OhctkTZMiEvt28OyPRnIDFo1SYWo0lVgZrgebKPRzsifAaVti734ebQNcuUakhRzREvqrt4mvkFE2bvVkAIhD6D8nle7c"/>
+</div>
+<div class="p-6">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant mb-2 block">Middag • 30 min</span>
+<h3 class="text-xl font-serif font-bold mb-3 group-hover:text-primary transition-colors">Laks med Asparges &amp; Søtpotet</h3>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-label text-on-surface-variant">4.9 (31 anmeldelser)</span>
+</div>
+</div>
+</article>
+</div>
+<!-- Pagination/Load More (Editorial Style) -->
+<div class="mt-20 flex flex-col items-center">
+<div class="w-12 h-[1px] bg-outline-variant/30 mb-8"></div>
+<button class="text-on-surface-variant font-label text-xs uppercase tracking-[0.3em] hover:text-primary transition-all">Last inn flere skatter</button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-12 px-6 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900">
+<div class="flex flex-col items-center justify-center space-y-4 w-full text-center">
+<div class="font-serif italic text-stone-900 dark:text-stone-50 text-xl">Min kokebok</div>
+<div class="flex space-x-6">
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-orange-600 underline decoration-stone-300" href="#">Om oss</a>
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-orange-600 underline decoration-stone-300" href="#">Personvern</a>
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 dark:text-stone-400 hover:text-orange-600 underline decoration-stone-300" href="#">Kontakt</a>
+</div>
+<p class="text-xs font-sans uppercase tracking-widest text-stone-500 dark:text-stone-400">© 2024 Min kokebok - Den digitale kuratoren</p>
+</div>
+</footer>
+<!-- FAB for mobile adding (only on main screens) -->
+<button class="md:hidden fixed bottom-24 right-6 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary shadow-2xl flex items-center justify-center active:scale-90 transition-all z-40">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</body></html>

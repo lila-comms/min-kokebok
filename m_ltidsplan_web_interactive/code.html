@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="no"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "surface-container": "#efeeeb",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#dac3a9",
+              "tertiary": "#6d5b46",
+              "surface-container-highest": "#e4e2df",
+              "error-container": "#ffdad6",
+              "on-surface": "#1b1c1a",
+              "surface": "#fbf9f6",
+              "inverse-primary": "#e7c095",
+              "inverse-surface": "#30312f",
+              "on-surface-variant": "#4e453c",
+              "on-primary-container": "#432c0c",
+              "surface-variant": "#e4e2df",
+              "secondary": "#6b5c4b",
+              "primary": "#765936",
+              "surface-container-low": "#f5f3f0",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#251909",
+              "inverse-on-surface": "#f2f0ed",
+              "error": "#ba1a1a",
+              "surface-container-high": "#eae8e5",
+              "secondary-container": "#f5dfc9",
+              "on-background": "#1b1c1a",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fbf9f6",
+              "on-secondary": "#ffffff",
+              "background": "#fbf9f6",
+              "primary-fixed-dim": "#e7c095",
+              "on-tertiary-fixed-variant": "#544430",
+              "on-secondary-fixed": "#24190c",
+              "on-primary-fixed": "#2b1700",
+              "tertiary-container": "#aa957d",
+              "surface-tint": "#765936",
+              "primary-fixed": "#ffddb8",
+              "outline": "#80756a",
+              "tertiary-fixed": "#f7dfc4",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#726250",
+              "secondary-fixed": "#f5dfc9",
+              "outline-variant": "#d2c4b8",
+              "on-tertiary-container": "#3c2e1c",
+              "on-secondary-fixed-variant": "#534434",
+              "surface-dim": "#dbdad7",
+              "secondary-fixed-dim": "#d8c3ae",
+              "primary-container": "#b5926a",
+              "on-primary-fixed-variant": "#5c4220"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body { font-family: 'Work Sans', sans-serif; }
+      h1, h2, h3, .serif-font { font-family: 'Noto Serif', serif; }
+      .glass-nav { backdrop-filter: blur(20px); }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen">
+<!-- Top Navigation Bar (Mobile & Small screens) -->
+<header class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-stone-200/20 dark:border-stone-800/20 shadow-sm dark:shadow-none md:hidden">
+<div class="flex justify-between items-center px-6 py-4">
+<h1 class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50">Min kokebok</h1>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-orange-900 dark:text-orange-200">account_circle</span>
+</div>
+</div>
+</header>
+<!-- Side Navigation Bar (Desktop) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-screen py-8 h-full w-64 border-r border-stone-200 dark:border-stone-800 bg-stone-50 dark:bg-stone-950 z-40">
+<div class="px-8 mb-12">
+<div class="text-xl font-serif font-black tracking-widest uppercase text-stone-900 dark:text-stone-50 mb-1">Min kokebok</div>
+<div class="text-xs font-sans uppercase tracking-widest text-stone-500">Digital Kurator</div>
+</div>
+<nav class="flex-1 space-y-2">
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">book</span>
+<span>Mine Oppskrifter</span>
+</a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span>Oppdag Inspirasjon</span>
+</a>
+<a class="bg-stone-200 dark:bg-stone-800 text-orange-900 dark:text-orange-100 rounded-lg mx-2 px-4 py-3 font-semibold flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span>Måltidsplan</span>
+</a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span>Ny Oppskrift</span>
+</a>
+<a class="text-stone-500 dark:text-stone-400 mx-2 px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-900 rounded-lg flex items-center gap-3 transition-transform duration-200 hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span>Handleliste</span>
+</a>
+</nav>
+<div class="mt-auto px-6">
+<button class="w-full py-4 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-medium shadow-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+<span>Start matlaging</span>
+</button>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="md:ml-64 pt-20 md:pt-12 pb-24 px-4 md:px-12 max-w-7xl mx-auto">
+<!-- Editorial Header Section -->
+<header class="mb-12 md:mb-16">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-xs font-label uppercase tracking-[0.2em] text-on-surface-variant mb-2 block">Uke 42 • Oktober 2024</span>
+<h2 class="text-4xl md:text-6xl font-headline italic tracking-tight text-on-surface">Måltidsplan</h2>
+</div>
+<div class="flex gap-4">
+<button class="px-6 py-3 rounded-full border border-outline-variant/20 hover:bg-surface-container-low transition-colors text-sm font-medium flex items-center gap-2">
+<span class="material-symbols-outlined text-lg">share</span>
+                        Del plan
+                    </button>
+<button class="px-8 py-3 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full font-medium shadow-md hover:shadow-xl transition-all flex items-center gap-2 cursor-pointer">
+<span class="material-symbols-outlined">shopping_cart</span>
+                        Generer handleliste
+                    </button>
+</div>
+</div>
+</header>
+<!-- The Editorial Weekly Grid -->
+<div class="grid grid-cols-1 md:grid-cols-7 gap-4 md:gap-2 mb-16">
+<!-- Monday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high border-r border-transparent md:border-stone-200/10">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Mandag</span>
+<span class="text-xl font-headline italic">14. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4">
+<div class="relative rounded-lg overflow-hidden h-48 bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<img class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" data-alt="vibrant healthy salad bowl with roasted chickpeas and fresh vegetables under soft natural morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjltlI1uiN2kQiqH3e6NIyjL1INNsoG8cm_UC-HN-QxFDA9HjdBq4LAPmqg-tBd_ApZ0YweYarwEW5trHqF8f7vgHlv2HOJUIBAQvfDDlsUOoA02A7AC8JcasMmB05J2tBkHcdoKYgZuM1oudeehsNn-FCW1COaMxoTUByquL5f4-NYjJoxscx5WaZiMwX1n8C3K7uyWNNzEC8vDc7pQY4Qn3a5YB3gjZXCg59JZTWShV8XrBbj0EY6-vnNpOkDdFr4FQz30Kw3NY"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+<span class="text-white text-xs font-medium">Grønn Salat</span>
+</div>
+</div>
+<button class="w-full py-4 border-2 border-dashed border-outline-variant/30 rounded-lg flex flex-col items-center justify-center text-on-surface-variant hover:border-primary/50 hover:bg-white/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-xl mb-1">add</span>
+<span class="text-[10px] uppercase tracking-tighter">Legg til middag</span>
+</button>
+</div>
+</div>
+<!-- Tuesday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-lowest transition-all duration-500 hover:bg-surface-container-high shadow-sm z-10 scale-[1.02] md:scale-100 md:hover:scale-[1.05]">
+<div class="p-4 border-b border-outline-variant/10 bg-surface-container-low">
+<span class="text-[10px] font-label uppercase tracking-widest text-primary font-bold block">Tirsdag</span>
+<span class="text-xl font-headline italic">15. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4">
+<div class="relative rounded-lg overflow-hidden h-64 bg-surface-container-lowest shadow-md">
+<img class="w-full h-full object-cover" data-alt="artisan italian pasta carbonara with creamy sauce and herbs on a rustic wooden table with shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_X2ZB8SLoeZEpouv-bhLB2yadknszibH4OIW20V626ThAWoVNzN0LAxsI91wpFCZhXZKvvvX02YuEyJsys_TJ-iHe6Ox5wjSehXYgC5q9Y5X8Jz6HclxkD6VbMH_TcEPGTQ_KY3_wt7Aj97Mlvos-iXVlNXjwWSwHwDwGfHnQenXTOVZMcLTg63DHk9qFGlp1SYLliiFG07AAeeX5-8Ex6mSSrEplaGFl_ZO6_Gof63HRqGGYS4Tm_bEvJS6749qUBa3XadZZ1qA"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+<span class="text-white text-sm font-headline italic block">Pasta Carbonara</span>
+<span class="text-white/70 text-[10px] uppercase">25 min • Enkel</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Wednesday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Onsdag</span>
+<span class="text-xl font-headline italic">16. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4">
+<div class="relative rounded-lg overflow-hidden h-48 bg-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all" data-alt="steaming bowl of vegetable soup with crusty artisan bread on the side warm atmospheric kitchen lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFIa7VHF28LbyaJfQj8T514JsQoZM8v3wAfgwZ5VZy8HYNA6tAo-binVIUK2U3cdGWXkb8roJJm48IKz2-UjkxQ4UuHOmII5ilyaLmHmshQDijrq9EAh9xGcx_jke50GGTYtN09vkheToSScARRXE-fCsGCbss_WFI0fkvekwUqrnWUro-xCWrumfZwSCbZ6OKuqKtSuovMsGFZ4Anw7RQ4pZEuWEZ4E-5flXL_TAjxF6sEF5FHG7AS4rZ_-dx4IAEtrXYh93Meqo"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+<span class="text-white text-xs font-medium">Linsesuppe</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Thursday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Torsdag</span>
+<span class="text-xl font-headline italic">17. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4 flex flex-col justify-center">
+<button class="aspect-square w-full border-2 border-dashed border-outline-variant/30 rounded-lg flex flex-col items-center justify-center text-on-surface-variant hover:border-primary/50 hover:bg-white/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-2xl mb-2">auto_awesome</span>
+<span class="text-[10px] uppercase tracking-widest text-center px-4">Foreslå basert på kjøleskap</span>
+</button>
+</div>
+</div>
+<!-- Friday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Fredag</span>
+<span class="text-xl font-headline italic">18. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4">
+<div class="relative rounded-lg overflow-hidden h-48 bg-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="homemade sourdough pizza with fresh basil and mozzarella bubbles of cheese golden hour lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeyaJlZhQk9ENIaVKzewR8rwd1XTG_jHZKzoNxFRf5NMyAh52ni4OKwCBuYnAHcIZI_PAJUxl5V3_15_mIh6eUeZLlm3cQGlT2acztTmGcC5IcdumBt5zcZORuL2h53U0g9ZceTqIkvg_vWCnHoE1sWPzIjgp7Wh2cp8zqxvlN8F2VJmBXkzkVE1A4n-6fsiEyWxSNNbXsrYUKoerLjOuz-ps342WbboLNUAsFbNRoW95tbuQgN0NahC8Lj9CtaKeb_iKQBI6grBg"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+<span class="text-white text-xs font-medium">Hjemmelaget Pizza</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Saturday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Lørdag</span>
+<span class="text-xl font-headline italic">19. okt</span>
+</div>
+<div class="flex-1 p-2 space-y-4">
+<div class="relative rounded-lg overflow-hidden h-56 bg-surface-container-lowest shadow-sm">
+<img class="w-full h-full object-cover" data-alt="succulent slow-cooked lamb shoulder with roasted root vegetables on a dark ceramic platter editorial food photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlBYx1LXTf-IQwJU8Z-M-FRhQhzwOXDmKXJIANc4po_zQmrx89ewRTHvYOIWpUN4j1dFIYSSoMO4NnqMBNbDp5_VRQBCVSpMF4UagU3M7YeMMkg7PsGogMMh7PO_SQDnnFCqnZO1oGiYSMmO8VvcwutZQ2HVC32oeG82K4hSvxQ_18S5i-mzxTA47z7HMcgQAs3PjkGXK6hsYsOP9k7BWDsyuf-bMtkMV2HeCXBxxO5TtGPfKDQjNrbkKP3Asc5EPUvlXoRHbhytQ"/>
+<div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 to-transparent p-3">
+<span class="text-white text-xs font-medium">Lørdagsstek</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sunday -->
+<div class="group relative flex flex-col min-h-[400px] bg-surface-container-low transition-all duration-500 hover:bg-surface-container-high">
+<div class="p-4 border-b border-outline-variant/10">
+<span class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant block opacity-60">Søndag</span>
+<span class="text-xl font-headline italic">20. okt</span>
+</div>
+<div class="flex-1 p-2 flex flex-col justify-center">
+<button class="w-full py-12 border-2 border-dashed border-outline-variant/30 rounded-lg flex flex-col items-center justify-center text-on-surface-variant hover:border-primary/50 hover:bg-white/50 transition-all cursor-pointer">
+<span class="material-symbols-outlined text-xl mb-1">add</span>
+<span class="text-[10px] uppercase tracking-tighter">Legg til</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Asymmetric Section: Smart Recommendations -->
+<section class="mb-16">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+<h3 class="text-2xl font-headline italic">Foreslått for deg</h3>
+<div class="h-[1px] flex-1 bg-outline-variant/20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Recommendation -->
+<div class="md:col-span-8 relative rounded-xl overflow-hidden group">
+<div class="aspect-[16/9] md:aspect-auto md:h-[400px]">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="top down view of a Mediterranean feast with multiple small dishes vibrant colors and textures on a stone surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGqlgIJAa-5SQg9odn_Ay_R4E-DT_HQiNi-3YjiYTp-1Nz_kicP7-vGLjC_D_N5IUageW9Dix6McPowQuK-l7arPqGGiNdV8TYSRjh9IhmoQfdSzm2Z77WacYCgNl-iB3vVi_nhmJOBhQkjNaCbziIBxzTG-akL7NM1VfuZah3uQBMnIO_KJGUxNTzpQxvDL-hn6VFd8Z0069kDFdGRMJm2dx30GDpkNVbxnWxnvTYx5D5dU1c7FsqIomxybDTc-TzpkUj8XO6jms"/>
+</div>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/80 via-on-surface/20 to-transparent flex items-center p-8 md:p-12">
+<div class="max-w-md">
+<span class="inline-block px-3 py-1 bg-primary text-on-primary text-[10px] font-label uppercase tracking-widest mb-4">Ukas favoritt</span>
+<h4 class="text-3xl md:text-5xl text-white font-headline italic mb-4">Høstlig Mezze-tallerken</h4>
+<p class="text-white/80 font-light mb-8 line-clamp-2">En perfekt kombinasjon av sesongens rotgrønnsaker, hjemmelaget hummus og varmt pitabrød. Perfekt for onsdagens middag.</p>
+<button class="px-8 py-3 bg-white text-on-surface rounded-full font-medium hover:bg-primary hover:text-white transition-all cursor-pointer">Legg til i plan</button>
+</div>
+</div>
+</div>
+<!-- Secondary Recommendation Card -->
+<div class="md:col-span-4 bg-surface-container-low p-8 rounded-xl flex flex-col justify-between">
+<div>
+<span class="text-primary text-[10px] font-label uppercase tracking-widest block mb-2">Fra arkivet</span>
+<h4 class="text-2xl font-headline italic mb-4">Gremolata-marinert Laks</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-6">Du hadde dette på planen for 3 uker siden og ga det 5 stjerner. Skal vi legge det til på torsdag?</p>
+</div>
+<div class="space-y-3">
+<button class="w-full py-3 bg-surface-container-lowest text-on-surface rounded-full font-medium border border-outline-variant/10 hover:bg-primary-fixed transition-all">Gjenta oppskrift</button>
+<button class="w-full py-3 text-on-surface-variant text-xs font-label uppercase tracking-widest hover:text-primary transition-colors">Se flere forslag</button>
+</div>
+</div>
+</div>
+</section>
+<!-- The "Ingredients Pull-Quote" Section -->
+<section class="max-w-3xl mx-auto mb-16 py-12 px-8 bg-surface-container-low/50 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary/20"></div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-4xl text-primary opacity-40">format_quote</span>
+<div>
+<h4 class="text-xl font-headline italic mb-2">Kuratoren tipser</h4>
+<p class="text-on-surface-variant italic leading-relaxed">
+                        "Ved å planlegge uken basert på ingredienser som overlapper – som spinat i både mandagens salat og tirsdagens pasta – reduserer du matsvinn med opptil 30% og sparer tid på butikken."
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full py-12 px-6 border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-900 md:ml-64 md:w-[calc(100%-16rem)]">
+<div class="flex flex-col items-center justify-center space-y-6 w-full text-center">
+<div class="font-serif italic text-stone-900 dark:text-stone-50 text-xl">Min kokebok</div>
+<div class="flex gap-8">
+<a class="text-stone-500 dark:text-stone-400 text-xs font-sans uppercase tracking-widest hover:text-orange-600 underline decoration-stone-300" href="#">Om oss</a>
+<a class="text-stone-500 dark:text-stone-400 text-xs font-sans uppercase tracking-widest hover:text-orange-600 underline decoration-stone-300" href="#">Personvern</a>
+<a class="text-stone-500 dark:text-stone-400 text-xs font-sans uppercase tracking-widest hover:text-orange-600 underline decoration-stone-300" href="#">Kontakt</a>
+</div>
+<p class="text-stone-500 dark:text-stone-400 text-[10px] font-sans uppercase tracking-widest">© 2024 Min kokebok - Den digitale kuratoren</p>
+</div>
+</footer>
+<!-- Mobile Bottom Navigation (Visible only on small screens) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-stone-50/80 backdrop-blur-md border-t border-stone-200/20 flex justify-around items-center py-3 px-2 z-50 md:hidden">
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">book</span>
+<span class="text-[10px] uppercase">Oppskrifter</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] uppercase">Oppdag</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-orange-800" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">calendar_today</span>
+<span class="text-[10px] uppercase font-bold">Plan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="text-[10px] uppercase">Handleliste</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] uppercase">Profil</span>
+</a>
+</nav>
+<!-- Floating Action Button (Only relevant on main plan screen for quick add) -->
+<button class="fixed bottom-24 right-6 md:right-12 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform z-40 md:hidden">
+<span class="material-symbols-outlined text-3xl">add</span>
+</button>
+</body></html>
