@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html lang="no"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed": "#f7dfc4",
+              "tertiary-container": "#aa957d",
+              "primary-fixed": "#ffddb8",
+              "on-secondary-fixed-variant": "#534434",
+              "error-container": "#ffdad6",
+              "surface-container": "#efeeeb",
+              "on-primary": "#ffffff",
+              "tertiary": "#6d5b46",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed-variant": "#544430",
+              "surface-container-low": "#f5f3f0",
+              "tertiary-fixed-dim": "#dac3a9",
+              "outline-variant": "#d2c4b8",
+              "secondary-fixed": "#f5dfc9",
+              "error": "#ba1a1a",
+              "outline": "#80756a",
+              "surface-variant": "#e4e2df",
+              "on-secondary-fixed": "#24190c",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#251909",
+              "surface-dim": "#dbdad7",
+              "on-error": "#ffffff",
+              "on-tertiary-container": "#3c2e1c",
+              "surface-tint": "#765936",
+              "surface": "#fbf9f6",
+              "secondary": "#6b5c4b",
+              "primary-container": "#b5926a",
+              "inverse-primary": "#e7c095",
+              "primary": "#765936",
+              "surface-container-lowest": "#ffffff",
+              "on-secondary-container": "#726250",
+              "inverse-on-surface": "#f2f0ed",
+              "secondary-container": "#f5dfc9",
+              "on-surface-variant": "#4e453c",
+              "surface-container-high": "#eae8e5",
+              "on-background": "#1b1c1a",
+              "on-surface": "#1b1c1a",
+              "on-primary-container": "#432c0c",
+              "inverse-surface": "#30312f",
+              "surface-bright": "#fbf9f6",
+              "on-primary-fixed-variant": "#5c4220",
+              "background": "#fbf9f6",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e4e2df",
+              "primary-fixed-dim": "#e7c095",
+              "on-primary-fixed": "#2b1700",
+              "secondary-fixed-dim": "#d8c3ae"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .tonal-layering {
+        box-shadow: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#765936] cursor-pointer" data-icon="menu">menu</span>
+<h1 class="font-serif text-2xl font-light tracking-tight text-[#765936] dark:text-[#b5926a]">Min kokebok</h1>
+</div>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[#765936] cursor-pointer" data-icon="favorite">favorite</span>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-3xl mx-auto">
+<!-- Editorial Header Section -->
+<section class="mb-12">
+<p class="font-label text-on-surface-variant text-[10px] uppercase tracking-[0.2em] mb-3">Handleliste for</p>
+<h2 class="font-headline text-4xl md:text-5xl text-primary mb-6 leading-tight italic">Miso-glasert laks med asparges</h2>
+<!-- Hero Image / Visual Break -->
+<div class="relative w-full h-64 mb-12 rounded-lg overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="Close-up of a perfectly cooked miso-glazed salmon fillet with charred edges, garnished with sesame seeds and fresh green herbs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwNvVyzrUn-DFjbRTLaTPnpDMJIsU_poMEx_z7N-t9yqvFbArpcpETASqU3GiNvzVihHQL5aKMWg_BiwvC5JNpuNaO9TY6C-ooq9xG379T9PYejV6XpmslHVY9kEYrZ4blhYT4E8pRRFHBahln5gq8IV0OzNQFADSmLR5FNVbG-y05o8RNHND55ZR9av2XORbjpb5L4vjRYYBdLBZ0edWFNl443HLrpKcKqCUVD_itJYu81PyPDvH5wSOFP1RwZsIdoHYLspN7HiA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+</div>
+</section>
+<!-- Serving Scaler: The Functional Core -->
+<section class="mb-12 bg-surface-container-low p-8 rounded-xl flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="space-y-1 text-center md:text-left">
+<h3 class="font-headline text-xl text-on-surface">Juster porsjoner</h3>
+<p class="text-on-surface-variant text-sm">Mengdene oppdateres automatisk</p>
+</div>
+<div class="flex items-center gap-6 bg-surface-container-lowest p-2 rounded-full border border-outline-variant/20">
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container-low text-primary hover:bg-primary-fixed transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="remove">remove</span>
+</button>
+<div class="flex flex-col items-center min-w-[60px]">
+<span class="text-3xl font-headline text-primary font-bold">2</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Pers</span>
+</div>
+<button class="w-12 h-12 flex items-center justify-center rounded-full bg-primary text-on-primary hover:bg-primary-container transition-colors active:scale-90">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+</button>
+</div>
+</section>
+<!-- Checklist Section -->
+<section class="space-y-12">
+<!-- Category: Ferskvare -->
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<h4 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant">Ferskvare &amp; Fisk</h4>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="space-y-1">
+<label class="group flex items-center justify-between p-4 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Salma laks, midtstykke</span>
+</div>
+<span class="font-headline italic text-primary">400 g</span>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-xl bg-surface-container-low/30 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Grønn asparges</span>
+</div>
+<span class="font-headline italic text-primary">1 bunt</span>
+</label>
+</div>
+</div>
+<!-- Category: Tørrvare & Sauser -->
+<div>
+<div class="flex items-center gap-4 mb-6">
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+<h4 class="font-label text-xs uppercase tracking-[0.3em] text-on-surface-variant">Skafferi</h4>
+<div class="h-[1px] flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="space-y-1">
+<label class="group flex items-center justify-between p-4 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Hvit misopaste</span>
+</div>
+<span class="font-headline italic text-primary">2 ss</span>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-xl bg-surface-container-low/30 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Mirin eller riseddik</span>
+</div>
+<span class="font-headline italic text-primary">1 ss</span>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-xl hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Sesamolje</span>
+</div>
+<span class="font-headline italic text-primary">1 ts</span>
+</label>
+<label class="group flex items-center justify-between p-4 rounded-xl bg-surface-container-low/30 hover:bg-surface-container-low transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="relative flex items-center">
+<input class="peer appearance-none w-6 h-6 border-2 border-primary rounded-lg checked:bg-primary transition-all" type="checkbox"/>
+<span class="material-symbols-outlined absolute text-on-primary opacity-0 peer-checked:opacity-100 text-sm left-1 pointer-events-none" data-icon="check">check</span>
+</div>
+<span class="text-on-surface group-hover:text-primary transition-colors peer-checked:line-through peer-checked:text-on-surface-variant">Sesamfrø, ristet</span>
+</div>
+<span class="font-headline italic text-primary">1 ss</span>
+</label>
+</div>
+</div>
+</section>
+<!-- Chef's Tip: Asymmetrical Editorial Component -->
+<section class="mt-16 relative">
+<div class="absolute left-0 top-0 bottom-0 w-1 bg-primary-container"></div>
+<div class="pl-8 py-4">
+<h5 class="font-headline italic text-2xl text-on-surface mb-2">Tips fra kokken</h5>
+<p class="text-on-surface-variant leading-relaxed">
+                    Misoglassuren kan brenne seg fort i ovnen på grunn av sukkerinnholdet. Hold et øye med laksen de siste 3 minuttene og dekk til med folie om nødvendig.
+                </p>
+</div>
+</section>
+<!-- Action Area -->
+<div class="mt-12 flex justify-center">
+<button class="px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-label text-sm uppercase tracking-widest shadow-lg active:scale-95 transition-all">
+                Send liste til meldinger
+            </button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 bg-[#fbf9f6]/90 dark:bg-stone-950/90 backdrop-blur-xl border-t border-[#d2c4b8]/20 shadow-[0_-4px_24px_rgba(27,28,26,0.06)] flex justify-around items-center h-20 px-4 pb-safe w-full">
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Mine Oppskrifter</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="add_circle">add_circle</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Ny Oppskrift</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#765936] dark:text-[#b5926a] bg-[#f5dfc9]/40 rounded-full px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_basket" style="font-variation-settings: 'FILL' 1;">shopping_basket</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Handleliste</span>
+</a>
+</nav>
+</body></html>

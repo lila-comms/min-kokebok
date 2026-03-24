@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="nb"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#dac3a9",
+              "surface-dim": "#dbdad7",
+              "outline-variant": "#d2c4b8",
+              "surface-variant": "#e4e2df",
+              "on-surface-variant": "#4e453c",
+              "on-primary-container": "#432c0c",
+              "surface-bright": "#fbf9f6",
+              "on-secondary-container": "#726250",
+              "tertiary": "#6d5b46",
+              "secondary-container": "#f5dfc9",
+              "on-primary-fixed": "#2b1700",
+              "on-secondary-fixed": "#24190c",
+              "error-container": "#ffdad6",
+              "secondary": "#6b5c4b",
+              "tertiary-fixed": "#f7dfc4",
+              "on-primary-fixed-variant": "#5c4220",
+              "secondary-fixed-dim": "#d8c3ae",
+              "on-background": "#1b1c1a",
+              "inverse-on-surface": "#f2f0ed",
+              "on-tertiary-fixed": "#251909",
+              "on-error": "#ffffff",
+              "surface-container": "#efeeeb",
+              "secondary-fixed": "#f5dfc9",
+              "outline": "#80756a",
+              "surface-container-low": "#f5f3f0",
+              "primary-fixed": "#ffddb8",
+              "on-secondary": "#ffffff",
+              "primary": "#765936",
+              "on-surface": "#1b1c1a",
+              "inverse-primary": "#e7c095",
+              "on-tertiary-container": "#3c2e1c",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e4e2df",
+              "surface": "#fbf9f6",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#534434",
+              "background": "#fbf9f6",
+              "surface-tint": "#765936",
+              "primary-fixed-dim": "#e7c095",
+              "surface-container-high": "#eae8e5",
+              "on-tertiary-fixed-variant": "#544430",
+              "on-primary": "#ffffff",
+              "primary-container": "#b5926a",
+              "tertiary-container": "#aa957d",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#30312f"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+        }
+        .editorial-shadow {
+            box-shadow: 0 24px 48px -12px rgba(27, 28, 26, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img alt="User profile photo" data-alt="Close-up portrait of a woman with a warm smile, natural lighting, soft depth of field, minimalist editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAotCNUJK_FgUFAfsz3sWkOQPto3VdpfIQvTDtjYtaNIU9TcJmGNiHv_Mw1RNil47ZzA3AdbM33tp_ggr7JSTC2p2eGo1cmfWi-B2Hd0YZR0nX3bXIDbJtrRCr7CpRUXZWTkAhYTaD-2QhGaS9UHTEhBlHdG_QcJJ9YaZvbCls2ztBeWpyWvL0WFAah1dG3Inb3QEUYX2y8pElouW2OAexZjwSX1xAW7z6uQzzUPGbwaadMRRbnUH4BSRxe0UgaqqqcPProKxPphtI"/>
+</div>
+<h1 class="text-2xl font-serif font-bold text-[#1b1c1a] dark:text-[#fbf9f6] font-serif italic tracking-tight">Min kokebok</h1>
+</div>
+<button class="text-[#765936] dark:text-[#b5926a] hover:opacity-70 transition-opacity active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</nav>
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto space-y-12">
+<!-- Profile Header Section -->
+<section class="relative">
+<div class="flex flex-col md:flex-row items-start md:items-end gap-6">
+<div class="relative w-32 h-40 bg-surface-container-low rounded-lg overflow-hidden editorial-shadow -rotate-2">
+<img alt="Profile picture" class="w-full h-full object-cover" data-alt="Elegant editorial portrait of a food enthusiast in a sunlit kitchen, wearing linen clothing, soft warm tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFRtp7b-39Rzf7wRqTRCavDTEN0Z6jJ-1_nggKmvsZ0JAU8akenv76Zw99EJSCerq0fFL5bnEZbiO_wbG3FbOsMGJy94p4EzpUXP-CWgKhSwf0CjyHA7vJMJgMLC0MU04Dqjy8kfax1hguRqnOxJmnTNpQj-wf70xuhs7k8hTEbIvGf_Heta9QjznnBzEUufAGDXg-3PUb6zQmXIDu_MfR8Ks3rCMERHrbskOQL0o5MH5VEIUHURRFICKjmsxmZ3y74i_SupYCHC0"/>
+</div>
+<div class="flex-1 space-y-1">
+<span class="text-[10px] uppercase tracking-[0.2em] font-medium text-on-surface-variant font-label">Digital Curator</span>
+<h2 class="text-4xl font-headline font-bold text-on-surface leading-tight">Astrid Berg</h2>
+<p class="text-on-surface-variant font-body italic max-w-xs">Samler på smaker fra hele verden, en oppskrift av gangen.</p>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<section class="grid grid-cols-3 gap-4">
+<div class="bg-surface-container-lowest p-6 rounded-lg editorial-shadow flex flex-col items-center justify-center text-center space-y-1">
+<span class="text-3xl font-headline font-bold text-primary">142</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Oppskrifter</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg editorial-shadow flex flex-col items-center justify-center text-center space-y-1 translate-y-2">
+<span class="text-3xl font-headline font-bold text-primary">24</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Lagrede</span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg editorial-shadow flex flex-col items-center justify-center text-center space-y-1">
+<span class="text-3xl font-headline font-bold text-primary">12</span>
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-label">Venner</span>
+</div>
+</section>
+<!-- Mine Venner Section -->
+<section class="space-y-6">
+<div class="flex justify-between items-baseline border-b-0">
+<h3 class="text-2xl font-headline italic text-on-surface">Mine venner</h3>
+<button class="text-primary font-label text-sm hover:underline">Se alle</button>
+</div>
+<div class="flex -space-x-4 overflow-hidden py-2">
+<img class="inline-block h-16 w-16 rounded-full ring-4 ring-surface object-cover" data-alt="Portrait of a young man, warm lighting, outdoor setting, friendly expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDD4Vv_ONpqSY3q-Vyrde_BBvvddQYCnG6_7FwAxHlAdFsKTJn7NKJoDVSTYQe84Myx4jxiafUXU45Tg8v-uFtPM6nJAL_6lNOIyguV8lvwzt8ltUBIuRsmm-aDKrmvewVhXCmWEWs8Yg3qQ1Qe2Nh_iKKtRji0kwXxz0mlKyIjyE9UYV_s5YpbCOXQdyxytKdojgOTGZiSH2R0W6K-9EIaSsST_YoK4gYpUbiYFLOSAfcYSQArG94b9EVALMe7lRGjuN6mOe1Ub88"/>
+<img class="inline-block h-16 w-16 rounded-full ring-4 ring-surface object-cover" data-alt="Portrait of a woman with curly hair, golden hour lighting, natural skin texture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEiXtT1N3y_zbH0-pv7n4RPniQgfRMig1M8b_-rfdo9JBzHAmZM6NdG8HRV1kkzCsj1WnfbOZtD7atCNt6qMkHzM7Nn2xF7HX_vd8XWN44Ku6U8U4L6j1YYUzOVIetcgcZYdPXxbhW6EtpRohVN1eZ27e3oWYhBBw-KcMRPRlPN4co347h0ssCuwUWycDPR56IR6ce8us4EF0lw6zAgKMF3DA37gAMQHyCNc79gXaf8ZV01TpnTFRadiq2C0LsdpwrBpGTII8qYAg"/>
+<img class="inline-block h-16 w-16 rounded-full ring-4 ring-surface object-cover" data-alt="Portrait of a smiling man in a linen shirt, soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCL53wwxX5QQMYe37Y3D7pJsVElwLEqGuyTFU5hT0M0GD3jzVJM3mKVS4U2niR1hJdltNzhriRLbraZ1IM2BkMiOmiIHpLZcwxDsgb2MMEJRR2oWJ0L7EIFO9iVAV8pETDNqeGTeB9FbUSukWRCgKsoGhfNF9eG47oxQhCTXGt0rhPbfxRBdn13-hbKsWZv3Pcf6lhnD4g34TiG86yoHPOC4zLlO5zJNrkSOhavaDrcZE605ZrEI1MhktNSQtu9GvCIK2dNn8J9NLM"/>
+<img class="inline-block h-16 w-16 rounded-full ring-4 ring-surface object-cover" data-alt="Elegant woman looking at camera, soft studio lighting, editorial style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZvX89wfrp6aOMELO5p5CcuknjYY3YtpzB5BGBTZGbTn3tJW4y_ALBWVTlXnBOq6DPAtr9IdX1P-J15-zInaQN2OlMHUQ5MwhSMmlGKR6W-qTTalt1IummCUrbGx0Oq-6sheXuQd4zGmKi41kweUTiNQsQ-rZWuSL7Vm2bDIXijGzaQAHkBYC23Ni9pLzEFw7y6yZkqp9iFqtO0CSwxdTngNLcnes_piBehigSEGgW_hKwWBpnVrePAlNLJ8SfZMj_SD4cQk58eKw"/>
+<div class="flex items-center justify-center h-16 w-16 rounded-full ring-4 ring-surface bg-secondary-container text-on-secondary-container font-headline font-bold text-lg">
+                    +8
+                </div>
+</div>
+</section>
+<!-- Preferences & Settings -->
+<section class="space-y-8">
+<div class="space-y-2">
+<h3 class="text-2xl font-headline italic text-on-surface">Innstillinger</h3>
+<div class="w-12 h-1 bg-primary-container"></div>
+</div>
+<div class="space-y-1">
+<!-- Setting Item 1 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="account_circle">account_circle</span>
+<div>
+<p class="font-medium text-on-surface">Kontoinformasjon</p>
+<p class="text-xs text-on-surface-variant font-body">E-post, passord og personvern</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Setting Item 2 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="restaurant">restaurant</span>
+<div>
+<p class="font-medium text-on-surface">Kostholdspreferanser</p>
+<p class="text-xs text-on-surface-variant font-body">Allergier, vegan, vegetar</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Setting Item 3 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-low rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="notifications_active">notifications_active</span>
+<div>
+<p class="font-medium text-on-surface">Varslinger</p>
+<p class="text-xs text-on-surface-variant font-body">Nye oppskrifter og venneforespørsler</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+<!-- Setting Item 4 -->
+<div class="group flex items-center justify-between p-4 bg-surface-container-lowest rounded-lg hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="language">language</span>
+<div>
+<p class="font-medium text-on-surface">Språk</p>
+<p class="text-xs text-on-surface-variant font-body">Norsk (Bokmål)</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" data-icon="chevron_right">chevron_right</span>
+</div>
+</div>
+<!-- Logout Button -->
+<button class="w-full py-4 text-error font-label uppercase tracking-widest text-xs font-semibold flex items-center justify-center gap-2 hover:bg-error-container/20 rounded-lg transition-colors">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Logg ut
+            </button>
+</section>
+<!-- Editorial Quote Component -->
+<section class="py-8">
+<div class="border-l-4 border-primary-container pl-6 space-y-2">
+<p class="text-xl font-headline italic text-on-surface leading-relaxed">
+                    "God mat er fundamentet for genuin lykke."
+                </p>
+<p class="text-[10px] uppercase tracking-[0.2em] font-medium text-on-surface-variant font-label">— Auguste Escoffier</p>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-[#fbf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md z-50 rounded-t-lg shadow-[0_-4px_24px_rgba(27,28,26,0.06)]">
+<!-- Recipes -->
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 hover:text-[#765936] dark:hover:text-[#b5926a] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Recipes</span>
+</a>
+<!-- Discover -->
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 hover:text-[#765936] dark:hover:text-[#b5926a] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Discover</span>
+</a>
+<!-- Meal Plan -->
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 hover:text-[#765936] dark:hover:text-[#b5926a] transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Meal Plan</span>
+</a>
+<!-- Profile (Active) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-br from-[#765936] to-[#b5926a] text-white rounded-full px-4 py-1 transition-all duration-300 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="person" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

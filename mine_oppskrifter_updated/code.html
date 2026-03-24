@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+
+<html lang="nb"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Min kokebok - Mine Oppskrifter</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,300;0,400;0,700;1,300&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "tertiary-fixed": "#f7dfc4",
+                        "tertiary-container": "#aa957d",
+                        "primary-fixed": "#ffddb8",
+                        "on-secondary-fixed-variant": "#534434",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#efeeeb",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#6d5b46",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#544430",
+                        "surface-container-low": "#f5f3f0",
+                        "tertiary-fixed-dim": "#dac3a9",
+                        "outline-variant": "#d2c4b8",
+                        "secondary-fixed": "#f5dfc9",
+                        "error": "#ba1a1a",
+                        "outline": "#80756a",
+                        "surface-variant": "#e4e2df",
+                        "on-secondary-fixed": "#24190c",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#251909",
+                        "surface-dim": "#dbdad7",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#3c2e1c",
+                        "surface-tint": "#765936",
+                        "surface": "#fbf9f6",
+                        "secondary": "#6b5c4b",
+                        "primary-container": "#b5926a",
+                        "inverse-primary": "#e7c095",
+                        "primary": "#765936",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#726250",
+                        "inverse-on-surface": "#f2f0ed",
+                        "secondary-container": "#f5dfc9",
+                        "on-surface-variant": "#4e453c",
+                        "surface-container-high": "#eae8e5",
+                        "on-background": "#1b1c1a",
+                        "on-surface": "#1b1c1a",
+                        "on-primary-container": "#432c0c",
+                        "inverse-surface": "#30312f",
+                        "surface-bright": "#fbf9f6",
+                        "on-primary-fixed-variant": "#5c4220",
+                        "background": "#fbf9f6",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#e4e2df",
+                        "primary-fixed-dim": "#e7c095",
+                        "on-primary-fixed": "#2b1700",
+                        "secondary-fixed-dim": "#d8c3ae"
+                    },
+                    fontFamily: {
+                        "headline": ["Noto Serif"],
+                        "body": ["Work Sans"],
+                        "label": ["Work Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+        }
+        .font-serif {
+            font-family: 'Noto Serif', serif;
+        }
+        .editorial-shadow {
+            box-shadow: 0 10px 30px -15px rgba(27, 28, 26, 0.1);
+        }
+        .glass-header {
+            background-color: rgba(251, 249, 246, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        /* Hide scrollbar for category tabs */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface selection:bg-primary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 glass-header">
+<div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-low/50 transition-colors p-2 rounded-full" data-icon="menu">menu</span>
+<h1 class="font-serif italic text-primary text-2xl tracking-tight">Min kokebok</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<nav class="flex gap-6 text-on-surface-variant font-medium tracking-wide text-sm uppercase">
+<a class="text-primary font-bold" href="#">Mine Oppskrifter</a>
+<a class="hover:text-primary transition-colors" href="#">Ny Oppskrift</a>
+<a class="hover:text-primary transition-colors" href="#">Handleliste</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-3 py-1 bg-surface-container-low rounded-full">
+<span class="material-symbols-outlined text-sm filled-icon text-primary" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="text-xs font-bold text-on-surface-variant">24</span>
+</div>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:bg-surface-container-low/50 transition-colors p-2 rounded-full" data-icon="search">search</span>
+</div>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Header Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-xs uppercase tracking-[0.2em] font-bold text-on-surface-variant mb-2 block">Din samling</span>
+<h2 class="text-5xl md:text-6xl font-serif text-on-surface leading-tight">Mine Oppskrifter</h2>
+</div>
+<div class="text-on-surface-variant italic font-serif text-lg">
+                    Viser <span class="text-primary font-bold not-italic">142</span> kulinariske skatter
+                </div>
+</div>
+<!-- Search & Filters -->
+<div class="mt-10 space-y-6">
+<!-- Search Bar -->
+<div class="relative max-w-2xl group">
+<span class="absolute left-0 top-1/2 -translate-y-1/2 material-symbols-outlined text-outline-variant group-focus-within:text-primary transition-colors" data-icon="search">search</span>
+<input class="w-full pl-10 pr-4 py-3 bg-transparent border-b border-outline-variant/30 focus:border-primary focus:ring-0 transition-all font-body text-lg outline-none placeholder:text-outline-variant/60" placeholder="Søk etter tittel eller ingrediens..." type="text"/>
+</div>
+<!-- Category Tabs -->
+<div class="flex items-center gap-3 overflow-x-auto no-scrollbar py-2 -mx-6 px-6">
+<button class="px-6 py-2 rounded-full bg-primary text-on-primary text-sm font-medium transition-all whitespace-nowrap">Alle</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Fisk</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Kjøtt</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Vegetar</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Pasta</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Suppe</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Barnas Favoritter</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Dessert</button>
+<button class="px-6 py-2 rounded-full bg-surface-container-low text-on-surface-variant text-sm font-medium hover:bg-surface-container-high transition-all whitespace-nowrap">Annet</button>
+</div>
+</div>
+</section>
+<!-- Recipe Grid (Editorial Layout) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+<!-- Featured Recipe Card -->
+<article class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 editorial-shadow">
+<img alt="Miso-glasert laks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Close-up of a perfectly seared miso-glazed salmon fillet with vibrant green cucumber salad and fluffy white rice on an artisan plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8pD5G-sXx7ra8JmoyVrpp58SiUxMjCTPdXtl6zmwztTwK9Zv-BTfXLrzwW0v4LQzj4MlClz7DEUPlDelsqrML_7qjfwdMJYG3dVUh6PBpVzDoSSJuG92DKnlA5l64hiSIlX2pLQ_7riq_iFpxwK0Y2wat_ygDQZq0CrozVaYPn0n48VgD31mzWuGR4HCHH4tYeRRhj250wDs8egdvufht9s9gN9d-dsurIL_egl264kmHF1E9vbD_WZW0830pj_7I50KAF2P00Kg"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur flex items-center justify-center text-primary editorial-shadow transition-transform active:scale-90">
+<span class="material-symbols-outlined filled-icon" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-on-secondary-container text-[10px] uppercase tracking-widest font-bold rounded-full">Fisk</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 2 porsjoner</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 30 min</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors leading-snug">Miso-glasert laks med asiatisk agurkraita og hvitløksris</h3>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="text-xs italic text-on-surface-variant/80">#asiatisk</span>
+<span class="text-xs italic text-on-surface-variant/80">#favoritt</span>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 editorial-shadow">
+<img alt="Frisk vegetarsalat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Vibrant healthy buddha bowl with roasted chickpeas, avocado slices, quinoa, and fresh greens in a minimalist ceramic bowl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1mL7S9UJO5DIzXyu-mLU2zqnjvonTr1T89n7aVI69zKI0c6xGunN8bUWcvDfSInKbpG8UJihNNqZnT_BqcTJo1M8KIWjV2JjSWFlsSFHMkEoQHTU7InzwevJWem40-kvV21euWMnZLtI3KA9V3ene0DV6XvfSbigVyD8UaXnBOAib457kc___dLMCb6FKd-VsHXYIRJ8z_Re2lS5jbMnzga5KDDLSBdPFbjfi414uqEQH-u7cPcABKtdTul66l2M7ZgT97HjBWhQ"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur flex items-center justify-center text-on-surface-variant editorial-shadow transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-on-secondary-container text-[10px] uppercase tracking-widest font-bold rounded-full">Vegetar</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 4 porsjoner</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 15 min</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors leading-snug">Rask Middags-Buddha Bowl</h3>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="text-xs italic text-on-surface-variant/80">#sunn</span>
+<span class="text-xs italic text-on-surface-variant/80">#rask</span>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="group cursor-pointer">
+<div class="relative aspect-[4/5] overflow-hidden rounded-lg mb-4 editorial-shadow">
+<img alt="Klassisk Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Detailed close-up of spaghetti carbonara with crispy pancetta, black pepper, and egg yolk sauce in a rustic Italian kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMN0IXxCO4pzRz_dQUfakysik3Grn__Bzoh8lZ59Z0bEgekAl0VUZyplbWwx0LQjxn8h0-I3iQY6_zNN0XpSpHufNG0W30MKOXcP5j2INrSvHJq6h71qvJXUb-yEkcFD2sLQ1XORv9dawRZfHcU5j6JGpOKpS_F6z49RuY4A6FFzPvciGbKsrX_vBiAzUtpdLLZst6Mh7FVsP9kcZ6eQofVeGsv6TBhYS1q4M9mYxZZJI8_sg4zgL0U_LLnT1YeOd-_dslWsun91I"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur flex items-center justify-center text-primary editorial-shadow transition-transform active:scale-90">
+<span class="material-symbols-outlined filled-icon" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-on-secondary-container text-[10px] uppercase tracking-widest font-bold rounded-full">Pasta</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 2 porsjoner</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 20 min</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors leading-snug">Autentisk Carbonara uten Fløte</h3>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="text-xs italic text-on-surface-variant/80">#italiensk</span>
+<span class="text-xs italic text-on-surface-variant/80">#klassiker</span>
+</div>
+</div>
+</article>
+<!-- Card 4 - Asymmetric Layout (Larger) -->
+<article class="group cursor-pointer md:col-span-2 lg:col-span-1">
+<div class="relative aspect-[16/9] md:aspect-[4/3] lg:aspect-[4/5] overflow-hidden rounded-lg mb-4 editorial-shadow">
+<img alt="Hjemmelaget Suppe" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Steaming hot roasted tomato basil soup served with a toasted cheese sourdough sandwich on a wooden board" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqFLbntjwbzeipaIJPKQm9ptiMefSEr-K2Mi6E5QRYMGnOrOWJFjHrLlw-kavbNGWLlIPD2qaEGEGVYZ0eePSkHkAgFORbhX9YTLcpR9CPh8XSwM2FCWGTI-glnRHADOppNzz1ukij-XzHcjyYtjwLkhFfRtRx1BppzZUBS70yYc_GvYcK0tPLikWDdhBrlkIVCo_uoV1wtdDBRmyLxpAyV1-eSrowwwgz0KNvgTAw4IT8xEAfeUdrVunuyZq6TtpI3b67jPeiwGg"/>
+<div class="absolute top-4 right-4">
+<button class="w-10 h-10 rounded-full bg-surface/90 backdrop-blur flex items-center justify-center text-on-surface-variant editorial-shadow transition-transform active:scale-90">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 flex gap-2">
+<span class="px-3 py-1 bg-secondary-container/90 backdrop-blur text-on-secondary-container text-[10px] uppercase tracking-widest font-bold rounded-full">Suppe</span>
+</div>
+</div>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant/60">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="group">group</span> 4 porsjoner</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span> 45 min</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface group-hover:text-primary transition-colors leading-snug">Ovnsbakt Tomatsuppe med Grillet Ost</h3>
+<div class="flex flex-wrap gap-2 pt-1">
+<span class="text-xs italic text-on-surface-variant/80">#comfortfood</span>
+</div>
+</div>
+</article>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-lg bg-[#fbf9f6]/90 dark:bg-stone-950/90 backdrop-blur-xl border-t border-[#d2c4b8]/20 shadow-[0_-4px_24px_rgba(27,28,26,0.06)] md:hidden">
+<div class="flex justify-around items-center h-20 px-4 pb-safe w-full">
+<a class="flex flex-col items-center justify-center text-[#765936] dark:text-[#b5926a] bg-[#f5dfc9]/40 rounded-full px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined filled-icon" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Oppskrifter</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="calendar_month">calendar_month</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Måltidsplan</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="add_circle">add_circle</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Ny Oppskrift</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 opacity-70 hover:opacity-100 transition-opacity active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="shopping_basket">shopping_basket</span>
+<span class="font-sans text-[10px] uppercase tracking-[0.1em] font-medium mt-1">Handleliste</span>
+</a>
+</div>
+</nav>
+<!-- Desktop Floating Action Button (New Recipe) -->
+<button class="hidden md:flex fixed bottom-12 right-12 bg-gradient-to-tr from-primary to-primary-container text-on-primary w-16 h-16 rounded-full items-center justify-center shadow-xl hover:scale-105 active:scale-95 transition-all z-40 group">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+<span class="absolute right-full mr-4 px-4 py-2 bg-on-surface text-surface rounded-lg text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">Ny Oppskrift</span>
+</button>
+</body></html>
