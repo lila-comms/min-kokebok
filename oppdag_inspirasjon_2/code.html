@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+
+<html class="light" lang="nb"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-fixed-dim": "#dac3a9",
+              "surface-dim": "#dbdad7",
+              "outline-variant": "#d2c4b8",
+              "surface-variant": "#e4e2df",
+              "on-surface-variant": "#4e453c",
+              "on-primary-container": "#432c0c",
+              "surface-bright": "#fbf9f6",
+              "on-secondary-container": "#726250",
+              "tertiary": "#6d5b46",
+              "secondary-container": "#f5dfc9",
+              "on-primary-fixed": "#2b1700",
+              "on-secondary-fixed": "#24190c",
+              "error-container": "#ffdad6",
+              "secondary": "#6b5c4b",
+              "tertiary-fixed": "#f7dfc4",
+              "on-primary-fixed-variant": "#5c4220",
+              "secondary-fixed-dim": "#d8c3ae",
+              "on-background": "#1b1c1a",
+              "inverse-on-surface": "#f2f0ed",
+              "on-tertiary-fixed": "#251909",
+              "on-error": "#ffffff",
+              "surface-container": "#efeeeb",
+              "secondary-fixed": "#f5dfc9",
+              "outline": "#80756a",
+              "surface-container-low": "#f5f3f0",
+              "primary-fixed": "#ffddb8",
+              "on-secondary": "#ffffff",
+              "primary": "#765936",
+              "on-surface": "#1b1c1a",
+              "inverse-primary": "#e7c095",
+              "on-tertiary-container": "#3c2e1c",
+              "on-tertiary": "#ffffff",
+              "surface-container-highest": "#e4e2df",
+              "surface": "#fbf9f6",
+              "error": "#ba1a1a",
+              "on-secondary-fixed-variant": "#534434",
+              "background": "#fbf9f6",
+              "surface-tint": "#765936",
+              "primary-fixed-dim": "#e7c095",
+              "surface-container-high": "#eae8e5",
+              "on-tertiary-fixed-variant": "#544430",
+              "on-primary": "#ffffff",
+              "primary-container": "#b5926a",
+              "tertiary-container": "#aa957d",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#30312f"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif", "serif"],
+              "body": ["Work Sans", "sans-serif"],
+              "label": ["Work Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Work Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Noto Serif', serif; }
+        .editorial-shadow { box-shadow: 0 24px 48px -12px rgba(27, 28, 26, 0.08); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed antialiased">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-[#fbf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md">
+<div class="flex justify-between items-center px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-surface-container-high overflow-hidden border border-outline-variant/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a smiling woman with warm lighting and a soft-focus kitchen background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDybpJaj4wlPg3eiO3YJeVdwK9S-ibueLAyEi4XRn5E6tq4zdRXdMA1yLNPzFY6EPjUP-1Crgt9N9uW5bSrKvox0XQ7vIyWaKUqbf3JROYEPkCrwqQADgApEd6DOAdbsUsY7fF8RU9C_-kT0Jqfvs6LCEd5VciTAd_k0rhVxRwIQjAfTZU0u5Fd8TDluVph_WPUTGExpIxjTRaJa5NdCO6WMoWsRypV9GrthVRboDDDozwdpIJmCBNmEbd-OaZWp6WqrSc4Vpqyy0w"/>
+</div>
+</div>
+<h1 class="text-2xl font-serif font-bold text-[#1b1c1a] dark:text-[#fbf9f6] font-serif italic tracking-tight">Min kokebok</h1>
+<button class="text-[#765936] dark:text-[#b5926a] hover:opacity-70 transition-opacity active:scale-95">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Section: Inspiration Header -->
+<section class="mb-16">
+<div class="flex flex-col md:flex-row items-baseline justify-between mb-8 gap-2">
+<div>
+<span class="font-label uppercase tracking-[0.2em] text-[10px] font-semibold text-primary mb-2 block">Oppdag nye smaker</span>
+<h2 class="text-4xl md:text-6xl font-headline tracking-tight text-on-surface">Månedens inspirasjon</h2>
+</div>
+<div class="w-full md:w-1/3 mt-4 md:mt-0">
+<p class="text-on-surface-variant font-body text-sm leading-relaxed border-l-4 border-primary/20 pl-4 italic">
+                        "Kulinarisk glede handler om å tørre å feile og evnen til å dele."
+                    </p>
+</div>
+</div>
+<!-- Bento Editorial Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-full md:h-[600px]">
+<div class="md:col-span-7 relative group overflow-hidden rounded-xl editorial-shadow">
+<img alt="Main feature" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Overhead shot of a rustic wooden table with vibrant Mediterranean ingredients, fresh herbs, and olive oil in warm afternoon light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbHssmcVMO-eQEL3l7oAEtrmlh2G4a8tCZgTSIqkqZBlhZFrR6bIQetaMKZ81tslGesOXeZGcm3kA1883vU-gjtuiLAogKFt3GKWpy0WuWqpJid6iV_J77WqjSg9cbrdY2FdraNs3mlnris0OUUy_eEbkqbakRNi7nIE9Ruc36pQaY5Z2tVJ2Esm2WNCvW6wzwKnU1EetG83sgydPncVYaqIdv1aTMlxB4MJV1XI0c8LKXreTdQSVoe_CQlNt0xWhSADJYNp-E6NA"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-8 text-white">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-[10px] font-bold tracking-widest uppercase mb-4 inline-block">Månedens utvalgte</span>
+<h3 class="text-3xl md:text-5xl font-headline mb-4 leading-tight italic">Kunsten å lage den perfekte risottoen</h3>
+<p class="font-body text-white/90 max-w-md hidden md:block">Lær de hemmelige teknikkene fra Nord-Italia for en kremet konsistens hver eneste gang.</p>
+</div>
+</div>
+<div class="md:col-span-5 grid grid-rows-2 gap-6">
+<div class="relative group overflow-hidden rounded-xl editorial-shadow bg-surface-container-lowest">
+<img alt="Salad recipe" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Colorful Buddha bowl with roasted chickpeas, kale, avocado, and tahini dressing on a minimalist beige ceramic plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhEO6nbHt14Kq3rxWvnDRQXyr3fVlZZw5Klhr2t6uZwJ3GtnqeLZSA2tP3lIhWTWV-cWKAEZfosl-Pm1K23lvlYKhxswMDOiyaNak0M1iNgKXisx5NQExpz5gyovd6nyHZUSItD37y_6aYb2xiz_AMsUxdH-EtKtsitC9WoHUQdJHNi3Kzmd-KUvt1QM9Lozz6Ncx6morS9SfWQJpwHAZCYZi3A1mnTcPyQR-TwPTMkYMp73lf1EnG9RH5-9mz2ePsXzZr1_kskr4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+<div class="absolute inset-0 flex items-center justify-center text-white p-6">
+<h3 class="text-2xl font-headline text-center leading-tight drop-shadow-lg">Grønn energi: 5 fargerike salater</h3>
+</div>
+</div>
+<div class="bg-surface-container-highest p-8 flex flex-col justify-center rounded-xl">
+<h3 class="text-2xl font-headline italic mb-4 text-primary leading-tight">Sesongens råvarer: Jordskokk</h3>
+<p class="font-body text-on-surface-variant text-sm mb-6 leading-relaxed">Nøtteaktig, jordlig og utrolig allsidig. Oppdag tre måter å tilberede denne glemte skatten på.</p>
+<button class="self-start px-6 py-2 bg-gradient-to-br from-primary to-primary-container text-white rounded-full font-label text-xs uppercase tracking-widest font-bold active:scale-95 transition-all">Les mer</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Seasonal Favorites Section -->
+<section class="mb-20">
+<div class="flex items-center justify-between mb-10">
+<h2 class="text-3xl font-headline text-on-surface italic">Sesongens favoritter</h2>
+<div class="h-[1px] flex-grow mx-8 bg-outline-variant/30"></div>
+<button class="text-primary font-label text-xs uppercase tracking-widest font-bold hover:opacity-70">Se alle</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Recipe Card 1 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-4 editorial-shadow relative">
+<img alt="Autumn Soup" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Creamy pumpkin soup in a stoneware bowl garnished with toasted seeds and a swirl of cream, dark rustic background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD347QxhSG0kfvvSlFwVndjtvSD2Mre2YU3ZpAktAojuvMLAQHgLVNhVBrxokiX585hkif-xi2awZHoDRlJ3_Ftvb5fblSs-ZsEJjp2Y40s-w5mVW99F0vmiBdzsfGWeMYN-s4A4sY7q8D0W9AuSoxc5pYP16cx3RSWl73ZTLcEJ8fXgxXZz7y-uwxULha62AjGzNYVvYoQMBsbCBjTHLIHqZnhkE89Y-a0_-rHDjRN6vlqBnXjEHUHqxABQsx6VDGrc8bsXfJykj4"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm text-primary">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Varmer i kulden</span>
+<h3 class="text-xl font-headline group-hover:text-primary transition-colors">Kremet gresskarsuppe</h3>
+<div class="flex items-center gap-4 mt-2 text-on-surface-variant text-[11px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 45 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="restaurant">restaurant</span> Enkel</span>
+</div>
+</div>
+<!-- Recipe Card 2 -->
+<div class="flex flex-col group cursor-pointer lg:mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-4 editorial-shadow relative">
+<img alt="Pasta" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Fresh homemade pasta with sage butter and parmesan, golden hour lighting highlighting the texture of the flour and dough" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaoPz_DNdDLTbGl1-FyuMjMTd3UFYc-29UYqb9t0K60klQC8yA4sJEViYwsGHKVMmKpXTTZUN7G4QSOm-Nbhs_6sAF6mojfBXbfB5Z5fenoTd8YXFKTgzq9nFsFHNHEoYj2J3hKZgLLX795ZrJspQ1C8q77ENIBThOo7sMQvPeWLcouwzEmVjo2LOyKH_fwwYxGCWbyARQyvf6e4QihepXc99CiikylVSP4ftJOus1DNsXLPALyuUVmliKibWnbQ1f72fO0M9AYFY"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Klassisk italiensk</span>
+<h3 class="text-xl font-headline group-hover:text-primary transition-colors">Pasta med salviesmør</h3>
+<div class="flex items-center gap-4 mt-2 text-on-surface-variant text-[11px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 20 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="restaurant">restaurant</span> Medium</span>
+</div>
+</div>
+<!-- Recipe Card 3 -->
+<div class="flex flex-col group cursor-pointer">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-4 editorial-shadow relative">
+<img alt="Tart" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Rustic plum tart with golden flaky crust and powdered sugar dusting on a piece of parchment paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6HX8tZcgy2jBXDhrG55vjvS7CAc8XfB-gTBRkmbPjdDy4ESuc7lpucW3A1p91bAdonCiSkZ5M5MB39NosyTf8ethbPY3jiu7dQQcpEXoAftZI5P_G-NL-oS02Q0DDEMfgkhOpq_35z9pTehGbOtgo16AznQwh0N8F02YGHaBLwCB8dRWwrzfAQeHSKQRD4ld62BfcCZx0yb18uC20O_HooiD0QxqYRpaJFdjO88gQpIaARxfNHtBPpi99Iuk0y46fcjN_fFHOMxY"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Søt avslutning</span>
+<h3 class="text-xl font-headline group-hover:text-primary transition-colors">Rustikk plommetarte</h3>
+<div class="flex items-center gap-4 mt-2 text-on-surface-variant text-[11px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 60 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="restaurant">restaurant</span> Utfordrende</span>
+</div>
+</div>
+<!-- Recipe Card 4 -->
+<div class="flex flex-col group cursor-pointer lg:mt-12">
+<div class="aspect-[4/5] overflow-hidden rounded-xl mb-4 editorial-shadow relative">
+<img alt="Healthy Bowl" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Fresh poke bowl with salmon, edamame, and pickled ginger on a clean light grey surface with bright natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAwUiSTHXGGLaaEN2n232XAjVXLyJfdjucetZ7QIbTjMG2rpFcaz6BsNVlCo0iyU3jzUBT6L3PyuzwhhJgOVmAvxt43kVoFMLXvro5AvF4zB-GmYoukz9derkT5b9S2JPcqS1_Vr4dvyHTq2qDYv7X5KryxOJ3rzbMcSDWEwM9Kvb_npRsx_uk0ES16BVxw665HRlSB50m-RJh_voYoTyvLZGKuNMf1H8TD7QB8EUqpRODTiAhLiObqWEm33FDwU6SL7nYrJzlNrk"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm p-2 rounded-full shadow-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px]" data-icon="favorite">favorite</span>
+</div>
+</div>
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-1">Lett og sunt</span>
+<h3 class="text-xl font-headline group-hover:text-primary transition-colors">Sjømatbowl med ingefær</h3>
+<div class="flex items-center gap-4 mt-2 text-on-surface-variant text-[11px] font-medium">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="schedule">schedule</span> 15 min</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[14px]" data-icon="restaurant">restaurant</span> Enkel</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Quick Weekday Meals: Asymmetric Carousel-style -->
+<section class="mb-20 py-16 bg-surface-container-low -mx-6 px-6">
+<div class="max-w-7xl mx-auto">
+<div class="mb-12 max-w-lg">
+<h2 class="text-4xl font-headline mb-4">Raske hverdagsretter</h2>
+<p class="text-on-surface-variant font-body">Middag på bordet under 30 minutter uten å gå på kompromiss med smaken. Perfekt for travle dager.</p>
+</div>
+<div class="flex overflow-x-auto gap-8 pb-8 no-scrollbar">
+<div class="min-w-[300px] md:min-w-[450px] bg-surface-container-lowest p-4 rounded-xl editorial-shadow flex gap-6 items-center">
+<div class="w-1/3 aspect-square overflow-hidden rounded-lg">
+<img alt="Quick Salad" class="w-full h-full object-cover" data-alt="Steaming bowl of spicy ramen with soft boiled egg, green onions, and chili oil in an atmospheric kitchen setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKa52US2qWTRaFSH-afbqWXCt53eM6PRB41PVHiEXDtREY5hj2y-V8UBPXucIzwfJ5dSrbdW5XghiyD4IhB4KnUTIffzG8yrs2zEjzxd8P7lLW-NHAZoOhETYgEb9sZmsQKFNhfSAQHBlyvPOq7FVYJ7c_N6jXp1t-XTatBa0QwT31Y4kuXU0QdGmQfAFTojaRXdZ893dNtkfy3Y99PtSW8jNuAj8YbfyxDmv6bN5f1W_7FsjIxF2uj6PVOBUfAifSgMKDyJoUIMM"/>
+</div>
+<div class="w-2/3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">15 Minutter</span>
+<h4 class="text-lg font-headline mt-1 mb-2">Hurtig-Ramen med egg</h4>
+<p class="text-xs text-on-surface-variant font-body mb-4 line-clamp-2">Smaksrik kraft laget på minutter med hemmelige ingredienser fra skapet.</p>
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[450px] bg-surface-container-lowest p-4 rounded-xl editorial-shadow flex gap-6 items-center">
+<div class="w-1/3 aspect-square overflow-hidden rounded-lg">
+<img alt="Steak" class="w-full h-full object-cover" data-alt="Pan-seared salmon fillet with asparagus and lemon slices on a dark slate plate with cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0nXwd8B4wwO74k6hz6rdu03whANn532ehTy3kWu7yrN3dwLZC2ChiAwMWTpSAAMDyvyngHU6SrWgRZ0Tw9NC14WWP7frVuS2NI45XlIL1OI5Fo83u2PJhSUwzz-3DQEoOaOKPqT8oQaSTwrkyPiaunnmsF3hbu0ATIwMCGL6wM-iWnngle5e1SPe9_qJo-qTbeiyQGt-fIZOqnJ3AkiEQy1jXmsSABZCaUHmJHHZ4T2-O3cdfMxBy-P4ok_vpxazzk6TCFLzLI-g"/>
+</div>
+<div class="w-2/3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">20 Minutter</span>
+<h4 class="text-lg font-headline mt-1 mb-2">Sitronlaks med asparges</h4>
+<p class="text-xs text-on-surface-variant font-body mb-4 line-clamp-2">Alt-i-ett panne som sparer både tid og oppvask.</p>
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+<div class="min-w-[300px] md:min-w-[450px] bg-surface-container-lowest p-4 rounded-xl editorial-shadow flex gap-6 items-center opacity-70 hover:opacity-100 transition-opacity">
+<div class="w-1/3 aspect-square overflow-hidden rounded-lg">
+<img alt="Tacos" class="w-full h-full object-cover" data-alt="Gourmet fish tacos with red cabbage slaw and lime crema on a warm rustic table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiG27LT2XIKIVZBjLuCUImloZRF-O84TKC4YBlMIKk4s063ZDEcJ-5v3QbK4MiVvgtaSMk6HuEZSuUoEKBFHxCPZFGSKqAMsGxmPVtfWDoNCALy7aES2D7FYxEXcL-yKnX_3Tv60JAv7fW-2YA9_ndE-tt4iKM-Pvwl7wSp8QCOBn9lb_-dBN_bXpsPZTjUjts8ZGbw4h7LvhRP7gby-2rRztkD3UYW6X_dA8p112dzf0rWKBJwqSNz2anXnbX4xzol5qpCkdPF0Y"/>
+</div>
+<div class="w-2/3">
+<span class="text-primary font-bold text-[10px] uppercase tracking-widest">25 Minutter</span>
+<h4 class="text-lg font-headline mt-1 mb-2">Fisketaco med mangosalsa</h4>
+<p class="text-xs text-on-surface-variant font-body mb-4 line-clamp-2">En frisk vri på fredagsfavoritten som barna vil elske.</p>
+<span class="material-symbols-outlined text-primary text-[20px]" data-icon="arrow_forward">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Top Rated Recipes: Editorial Column Layout -->
+<section class="mb-20">
+<h2 class="text-3xl font-headline text-on-surface italic mb-12">Topprangerte oppskrifter</h2>
+<div class="space-y-12">
+<!-- Top Rated 1 -->
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-12 h-12 bg-primary text-white flex items-center justify-center rounded-full font-headline text-2xl z-10 editorial-shadow">1</div>
+<div class="aspect-video overflow-hidden rounded-xl editorial-shadow">
+<img alt="Best Carbonara" class="w-full h-full object-cover" data-alt="Traditional spaghetti carbonara with crispy guanciale and lots of pecorino cheese, dark moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTrON_LxxsCmnyc11ZS_gfKEv3DzsY4R-oGO1OHhdMetP_VZd9TNpgQtlrY_0meUPA8EzyIli6Jm0psV92paMf2VGwnVhfa2AlwzYDJKwYb0V9wxVl0_YtqwyCuNcEeFrxnvUgxuM44-0_bC9m1CtVgYr-WZzOsh-2g0nsWhcrErjUE-S3-VxvZRPOuuQcQXb-Vs4nbtbnKPyYlxypIugbTE_D8lLvctymlSHZV6AksNrqNX4iSUD2sWrnbSSjMZdZg76h4T8MrnY"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="flex gap-1 text-primary-container mb-3">
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-on-surface-variant font-label text-[10px] ml-2 self-center">(1.2k anmeldelser)</span>
+</div>
+<h3 class="text-3xl font-headline mb-4">Autentisk Carbonara</h3>
+<p class="text-on-surface-variant font-body mb-6 leading-relaxed">Ingen fløte, ingen snarveier. Bare egg, pecorino, guanciale og pepper. Oppdag hvorfor denne oppskriften har vært på topp i 3 år.</p>
+<button class="flex items-center gap-2 text-primary font-bold font-label text-xs uppercase tracking-[0.2em] border-b border-primary/20 pb-1 group">
+                            Se hele oppskriften
+                            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-2" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+<!-- Top Rated 2 -->
+<div class="flex flex-col md:flex-row-reverse gap-10 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-4 -right-4 w-12 h-12 bg-surface-container-highest text-primary flex items-center justify-center rounded-full font-headline text-2xl z-10 editorial-shadow">2</div>
+<div class="aspect-video overflow-hidden rounded-xl editorial-shadow">
+<img alt="Chocolate Lava Cake" class="w-full h-full object-cover" data-alt="Oozing chocolate fondant lava cake with a scoop of vanilla bean ice cream on a designer plate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDutrB0ZTDQzLCutBc0KGmw2HaNliftgxN2ykeMcvxFDEXZdRnnhg0i-g6d17Mo1i4ATvViMz3TpLZhaRTz0KfLBAR1M6MTfslC8y9guLxNBQ1BanIemrmr70P1TadBmQELP31PnbANxjtojTcSBfZHlck7PkUQUlQOAOsBi-XbrIU__rKNML3OY3y7CVRXCDMxVSfXs3vzWK9CQzjgn8LSJm0MZmm-ZwD1rmJdrqXM3gRpUFp1HkX1Ilbp4CAu8vNHOgBxphi1J_M"/>
+</div>
+</div>
+<div class="w-full md:w-1/2 md:text-right">
+<div class="flex gap-1 text-primary-container mb-3 md:justify-end">
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined fill" data-icon="star_half" style="font-variation-settings: 'FILL' 1;">star_half</span>
+<span class="text-on-surface-variant font-label text-[10px] ml-2 self-center">(840 anmeldelser)</span>
+</div>
+<h3 class="text-3xl font-headline mb-4">Flytende Sjokoladefondant</h3>
+<p class="text-on-surface-variant font-body mb-6 leading-relaxed">Hemmeligheten bak den perfekte flytende kjernen ligger i steketiden. Vi guider deg sekund for sekund til suksess.</p>
+<button class="flex items-center gap-2 text-primary font-bold font-label text-xs uppercase tracking-[0.2em] border-b border-primary/20 pb-1 group ml-auto">
+                            Se hele oppskriften
+                            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-2" data-icon="trending_flat">trending_flat</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center pt-3 pb-6 px-4 bg-[#fbf9f6]/80 dark:bg-stone-900/80 backdrop-blur-md z-50 rounded-t-lg shadow-[0_-4px_24px_rgba(27,28,26,0.06)]">
+<div class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 transition-all duration-300 ease-in-out hover:text-[#765936] dark:hover:text-[#b5926a]">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Recipes</span>
+</div>
+<div class="flex flex-col items-center justify-center bg-gradient-to-br from-[#765936] to-[#b5926a] text-white rounded-full px-6 py-1 transition-all duration-300 ease-in-out">
+<span class="material-symbols-outlined" data-icon="explore">explore</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Discover</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 transition-all duration-300 ease-in-out hover:text-[#765936] dark:hover:text-[#b5926a]">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Meal Plan</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#4e453c] dark:text-stone-400 px-4 py-1 transition-all duration-300 ease-in-out hover:text-[#765936] dark:hover:text-[#b5926a]">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-sans uppercase tracking-[0.1em] text-[10px] font-medium mt-1">Profile</span>
+</div>
+</nav>
+<!-- Contextual FAB - Suggest adding a new discovery/recipe -->
+<button class="fixed bottom-24 right-6 w-14 h-14 rounded-full bg-gradient-to-br from-primary to-primary-container text-white editorial-shadow flex items-center justify-center active:scale-95 transition-transform z-40">
+<span class="material-symbols-outlined text-[32px]" data-icon="add">add</span>
+</button>
+</body></html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="nb"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Oppdag Inspirasjon - Min kokebok</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error-container": "#93000a",
+              "surface-container": "#efeeeb",
+              "on-tertiary": "#ffffff",
+              "tertiary-fixed-dim": "#dac3a9",
+              "tertiary": "#6d5b46",
+              "surface-container-highest": "#e4e2df",
+              "error-container": "#ffdad6",
+              "on-surface": "#1b1c1a",
+              "surface": "#fbf9f6",
+              "inverse-primary": "#e7c095",
+              "inverse-surface": "#30312f",
+              "on-surface-variant": "#4e453c",
+              "on-primary-container": "#432c0c",
+              "surface-variant": "#e4e2df",
+              "secondary": "#6b5c4b",
+              "primary": "#765936",
+              "surface-container-low": "#f5f3f0",
+              "on-error": "#ffffff",
+              "on-tertiary-fixed": "#251909",
+              "inverse-on-surface": "#f2f0ed",
+              "error": "#ba1a1a",
+              "surface-container-high": "#eae8e5",
+              "secondary-container": "#f5dfc9",
+              "on-background": "#1b1c1a",
+              "surface-container-lowest": "#ffffff",
+              "surface-bright": "#fbf9f6",
+              "on-secondary": "#ffffff",
+              "background": "#fbf9f6",
+              "primary-fixed-dim": "#e7c095",
+              "on-tertiary-fixed-variant": "#544430",
+              "on-secondary-fixed": "#24190c",
+              "on-primary-fixed": "#2b1700",
+              "tertiary-container": "#aa957d",
+              "surface-tint": "#765936",
+              "primary-fixed": "#ffddb8",
+              "outline": "#80756a",
+              "tertiary-fixed": "#f7dfc4",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#726250",
+              "secondary-fixed": "#f5dfc9",
+              "outline-variant": "#d2c4b8",
+              "on-tertiary-container": "#3c2e1c",
+              "on-secondary-fixed-variant": "#534434",
+              "surface-dim": "#dbdad7",
+              "secondary-fixed-dim": "#d8c3ae",
+              "primary-container": "#b5926a",
+              "on-primary-fixed-variant": "#5c4220"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Work Sans"],
+              "label": ["Work Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Work Sans', sans-serif;
+            background-color: #fbf9f6;
+            color: #1b1c1a;
+        }
+        .editorial-title {
+            font-family: 'Noto Serif', serif;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-md border-b border-stone-200/20 shadow-sm md:flex hidden">
+<div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto w-full">
+<span class="text-2xl font-serif font-bold text-stone-900 dark:text-stone-50">Min kokebok</span>
+<div class="flex items-center space-x-8">
+<a class="text-stone-600 hover:text-stone-900 transition-colors" href="#">Mine Oppskrifter</a>
+<a class="text-orange-800 border-b-2 border-orange-800 pb-1 font-medium" href="#">Oppdag Inspirasjon</a>
+<a class="text-stone-600 hover:text-stone-900 transition-colors" href="#">Måltidsplan</a>
+<a class="text-stone-600 hover:text-stone-900 transition-colors" href="#">Ny Oppskrift</a>
+<a class="text-stone-600 hover:text-stone-900 transition-colors" href="#">Handleliste</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 hover:bg-stone-100/50 rounded-md transition-all active:scale-95">
+<span class="material-symbols-outlined text-stone-900">search</span>
+</button>
+<button class="p-2 hover:bg-stone-100/50 rounded-md transition-all active:scale-95">
+<span class="material-symbols-outlined text-stone-900">account_circle</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- SideNavBar (Mobile/Tablet Hidden by default, following logic) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-screen py-8 w-64 border-r border-stone-200 bg-stone-50 z-40">
+<div class="px-6 mb-12">
+<h1 class="text-xl font-serif font-black tracking-widest uppercase text-stone-900">Min kokebok</h1>
+<p class="text-stone-500 font-serif italic text-sm">Digital Kurator</p>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-stone-500 mx-2 px-4 py-3 hover:bg-stone-100 rounded-lg flex items-center gap-3 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">book</span>
+<span class="font-serif text-lg">Mine Oppskrifter</span>
+</a>
+<a class="bg-stone-200 text-orange-900 rounded-lg mx-2 px-4 py-3 font-semibold flex items-center gap-3 shadow-inner active:scale-98" href="#">
+<span class="material-symbols-outlined">explore</span>
+<span class="font-serif text-lg">Oppdag Inspirasjon</span>
+</a>
+<a class="text-stone-500 mx-2 px-4 py-3 hover:bg-stone-100 rounded-lg flex items-center gap-3 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="font-serif text-lg">Måltidsplan</span>
+</a>
+<a class="text-stone-500 mx-2 px-4 py-3 hover:bg-stone-100 rounded-lg flex items-center gap-3 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">add_circle</span>
+<span class="font-serif text-lg">Ny Oppskrift</span>
+</a>
+<a class="text-stone-500 mx-2 px-4 py-3 hover:bg-stone-100 rounded-lg flex items-center gap-3 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">shopping_cart</span>
+<span class="font-serif text-lg">Handleliste</span>
+</a>
+<a class="text-stone-500 mx-2 px-4 py-3 hover:bg-stone-100 rounded-lg flex items-center gap-3 transition-transform hover:translate-x-1" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-serif text-lg">Profil</span>
+</a>
+</nav>
+<div class="px-6 mt-auto">
+<button class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary py-3 rounded-full font-medium shadow-sm transition-all active:scale-95">
+                Start matlaging
+            </button>
+</div>
+</aside>
+<!-- Main Canvas -->
+<main class="md:pl-64 pt-0 md:pt-0">
+<!-- Hero Section: Editorial Feature -->
+<section class="relative h-[819px] w-full overflow-hidden bg-surface-container-low">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Close-up of vibrant Moroccan vegetable tagine with steaming spices and fresh herbs, warm golden lighting, atmospheric steam" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALwRrevz7XflSlPZN0K0Zk_BM1Q1oLkdByTBeSvY97hM2SK4Mbynukqi34Dy0kJt0vgX93Q2jo9KTU_t4U9L3Z6wVpR6H0gEsz3lVkj8_i-QLicEY9GTMW2gec2anAw1U_M8e0Gl-omg_UMy-xZHR5RFUiASob_XVMkYV6QNQO4FwNMGETdNZ51I2T2VFpKvQvPcLWTUzVXtj2GfpVUerMhiQK6ZIPQbBDoW981zdTnnHWqgRvsbxOO-NZt9Mq1L8vY0TJveBRxTc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80"></div>
+</div>
+<div class="relative z-10 h-full max-w-7xl mx-auto px-6 flex flex-col justify-end pb-24">
+<div class="max-w-2xl">
+<span class="label-md inline-block mb-4 tracking-[0.2em] text-on-surface-variant font-medium uppercase">Ukens Kuratering</span>
+<h1 class="editorial-title text-6xl md:text-8xl text-on-surface leading-tight mb-6">Middelhavets Skjulte Skatter</h1>
+<p class="text-xl md:text-2xl font-serif italic text-on-surface-variant mb-8 leading-relaxed">
+                        En reise gjennom kystens smaker, fra den salte brisen i Amalfi til solmodne tomater i Provence.
+                    </p>
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-4 rounded-full text-lg font-medium shadow-xl active:scale-95 transition-transform">
+                        Les artikkelen
+                    </button>
+</div>
+</div>
+</section>
+<!-- Search & Filter Bar (Minimalist) -->
+<section class="max-w-7xl mx-auto px-6 -mt-8 relative z-20">
+<div class="bg-surface-container-lowest p-4 md:p-6 rounded-xl shadow-lg flex flex-col md:flex-row gap-4 items-center border border-outline-variant/20">
+<div class="flex-1 w-full relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-transparent border-b border-outline-variant/20 focus:border-primary focus:ring-0 transition-colors outline-none font-body" placeholder="Søk etter ingredienser, sesong eller humør..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto overflow-x-auto pb-2 md:pb-0 no-scrollbar">
+<span class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Hurtigmat</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Vegetar</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Middag</span>
+<span class="bg-surface-container-high text-on-surface-variant px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap">Bakst</span>
+</div>
+</div>
+</section>
+<!-- Inspiration Grid -->
+<section class="max-w-7xl mx-auto px-6 py-20">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-12 gap-4">
+<h2 class="editorial-title text-4xl text-on-surface">Utforsk Smakene</h2>
+<p class="text-on-surface-variant font-body italic">Sortert etter din kulinariske nysgjerrighet</p>
+</div>
+<!-- Bento / Masonry Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 auto-rows-[250px]">
+<!-- Card 1: Large Vertical -->
+<div class="md:col-span-4 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artistic overhead shot of fresh garden salad with edible flowers and citrus vinaigrette, soft daylight, editorial food photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8ooSQUAGJtGxerT9_ffqjp7aPKspr_3fVWucNvVJs45OnmywrDqLEBP0HSk4Vj-8mPyGIZU3yzOLdkABCcayj1YJP0D06zSFsyluhsLLLDii7k6meqyJ7Wtf-yYNN0oTitvW_DSlsQuFmmEl79lvJatEvPERjuV0So3KJCjmNak4jWoTjFab9_QnSGv0RnOc2YIyvDoNufoLBX6JCIOFd27fXVMdQFB3sK25vjyPUqfv1ls7DxYWfdOXuQl7hgqbr8IzvcW-xWbE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/80 via-transparent to-transparent p-8 flex flex-col justify-end">
+<span class="label-sm text-primary-fixed mb-2 tracking-widest uppercase">Trend</span>
+<h3 class="editorial-title text-3xl text-white mb-2">Salatens renessanse</h3>
+<p class="text-stone-300 text-sm line-clamp-2">Hvordan enkle råvarer fra hagen ble stjernen i det moderne kjøkkenet.</p>
+</div>
+</div>
+<!-- Card 2: Horizontal -->
+<div class="md:col-span-8 md:row-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row h-full">
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<span class="label-sm text-on-surface-variant mb-2 tracking-widest uppercase">Sesong</span>
+<h3 class="editorial-title text-2xl text-on-surface mb-3">Høstferiens beste supper</h3>
+<button class="text-primary font-medium hover:underline w-fit flex items-center gap-2">Se oppskriftene <span class="material-symbols-outlined text-sm">arrow_forward</span></button>
+</div>
+<div class="md:w-1/2 h-full">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Cozy bowl of orange pumpkin soup with toasted seeds and a swirl of cream, rustic wooden table, warm autumn lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkT9XvHN0NSGdZmgc7FsGU0Gof1_GkbSJAuggw0qwVPEfw8RH01WBRFOT5KGdVronLYQEofoGrNO-zPpOrI8YuKLHOuyd1KGqTRLQETag1OSaEVrjnMNG8herf12DiHYNKKZD_Lyg61h5y7BhxyJl6UwNFtdGVzWBr3hwSSjnhCGLt8sxcduQD3GCWNBooKXCPS-Q8AuiFSmFsJMm44u45_ekcojcfCI83XQoHgExWEKhiq3Ht1nQSgoaxmwdf8f16YpUuMHfPQ-A"/>
+</div>
+</div>
+</div>
+<!-- Card 3: Small Square -->
+<div class="md:col-span-4 md:row-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a poke bowl with tuna, avocado, and radishes, bright and clean photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJz1VZ_ht1kGX23saOKrOTSF7uOIBAxaS_BJW7MhHouCPIn3sigXlG8o9wLmfmJfL160uQiGbi2Oy3WHSQ3o3WH8i9rxRpg5xIHegXqxyOC_dQa5xM5VlstemNFKkAjawl1BsxI7YwTFBeCSGIpVjlmYd-AaieevNtdacUhd2SlT9EIPv36f7-Q9yHp4VEDnjZq6AFrV17eaP_RhknxnvgFo6gceE4z4GK66Oi1DBdb2A9fE5rj53ncmi-RF4CXvGkZdK7DqBS5ww"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center">
+<h3 class="editorial-title text-2xl text-white text-center px-4">Sunn &amp; Rask</h3>
+</div>
+</div>
+<!-- Card 4: Pull-Quote Style -->
+<div class="md:col-span-4 md:row-span-1 bg-surface-container-high p-8 flex flex-col justify-center rounded-xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-primary"></div>
+<span class="material-symbols-outlined text-primary mb-4" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+<blockquote class="editorial-title text-xl italic text-on-surface-variant leading-relaxed">
+                        "God mat krever ikke alltid kompliserte teknikker, men den krever respekt for råvarene."
+                    </blockquote>
+<cite class="mt-4 text-xs font-label uppercase tracking-widest text-on-surface">— Kokkens Tips</cite>
+</div>
+<!-- Card 5: Large Landscape -->
+<div class="md:col-span-12 md:row-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest mt-4">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Artisan sourdough bakery interior with rows of fresh bread, warm floury atmosphere, soft side lighting from window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlfqKkBILclby7HOYGCpDkvayGI5B62qFvmSu7_dzMEWju-BPyIZx01KPwUVfjYp6TUTcl1rYYAFNcgBCGIIgfOkpdLchWtVc0eNeiEGU8UKoPw1VXt-hskqq2UZYzjN0ukHO_JULNorEoB2OKJJsObSloB2PfSnvRvJyQsMM7e3vTtE9HuWvvOx7GrYPajdr-qR_RUERBS3f7Rnoq2A99Hr08l7n17GrDPOKo-vSxN2-91XyBuY7rOA2wlvg6dkanbmOGYbjIQTI"/>
+<div class="absolute inset-0 bg-gradient-to-r from-on-surface/90 via-on-surface/40 to-transparent p-12 flex flex-col justify-center max-w-xl">
+<span class="label-sm text-tertiary-fixed mb-4 tracking-[0.3em] uppercase">Mesterklassen</span>
+<h3 class="editorial-title text-5xl text-white mb-6">Surdeig fra bunnen</h3>
+<p class="text-stone-300 text-lg mb-8 leading-relaxed">En komplett guide for deg som vil mestre kunsten å bake med naturlig gjær.</p>
+<button class="border border-white/30 text-white px-8 py-3 rounded-full hover:bg-white hover:text-on-surface transition-all w-fit">Start læring</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter / Community Section -->
+<section class="bg-surface-container-low py-24 px-6 mt-12 overflow-hidden relative">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 relative z-10">
+<div class="md:w-1/2">
+<h2 class="editorial-title text-5xl text-on-surface mb-6">Bli med i vår kulinariske sirkel</h2>
+<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
+                        Få ukentlige kuraterte oppskrifter, historier bak råvarene og invitasjoner til våre digitale kokkekurs rett i innboksen.
+                    </p>
+<form class="flex gap-2">
+<input class="flex-1 px-6 py-4 bg-surface-container-lowest rounded-full border-none focus:ring-2 focus:ring-primary font-body outline-none" placeholder="Din e-post" type="email"/>
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-medium hover:bg-primary-container transition-colors active:scale-95">
+                            Abonner
+                        </button>
+</form>
+</div>
+<div class="md:w-1/2 relative">
+<div class="w-64 h-64 md:w-96 md:h-96 rounded-full overflow-hidden border-8 border-surface-container-lowest shadow-2xl rotate-3">
+<img class="w-full h-full object-cover" data-alt="Artistic shot of fresh herbs, garlic, and cherry tomatoes scattered on a dark slate surface, dramatic top-down lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbXSB_3kOQyuTo-Xh4uKyes6WoKEQlLkVtZtOBhK_7-h9Q4xgl548EIh1h0jVdFTO3U1raBm9XZ4abgfz-2Xov7EvOaZD3q3jkNlEXYg5U5F3BMwqAj10aaRW_aqf7iMc_fbpXLSD-g3OsZFlsSEpm3wpnITFLj0Si0mD5wcvBaIGZypNGRkPBTiwThDoQNsJBfD77OlNt4dQBOYhKQOD9Q66FeiT41VecbJEZGK0SfvhMhaJ1QRXQuXh25pxSDOJhonLSdfpanwA"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-primary-fixed-dim/30 rounded-full blur-3xl"></div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 w-full py-12 px-6 border-t border-stone-200 dark:border-stone-800 flex flex-col items-center justify-center space-y-4 text-center">
+<span class="font-serif italic text-2xl text-stone-900 dark:text-stone-50">Min kokebok</span>
+<div class="flex gap-8">
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 hover:text-orange-600 underline decoration-stone-300 transition-colors" href="#">Om oss</a>
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 hover:text-orange-600 underline decoration-stone-300 transition-colors" href="#">Personvern</a>
+<a class="text-xs font-sans uppercase tracking-widest text-stone-500 hover:text-orange-600 underline decoration-stone-300 transition-colors" href="#">Kontakt</a>
+</div>
+<p class="text-xs font-sans uppercase tracking-widest text-stone-500 mt-4">© 2024 Min kokebok - Den digitale kuratoren</p>
+</footer>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full bg-stone-50/90 backdrop-blur-md border-t border-stone-200 z-50 flex justify-around items-center py-3 px-2">
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">book</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Oppskrifter</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-orange-800" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">explore</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Inspirasjon</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500 -mt-8" href="#">
+<div class="w-14 h-14 bg-gradient-to-br from-primary to-primary-container rounded-full flex items-center justify-center text-white shadow-lg border-4 border-surface">
+<span class="material-symbols-outlined text-2xl">add</span>
+</div>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">calendar_today</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Plan</span>
+</a>
+<a class="flex flex-col items-center gap-1 text-stone-500" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium uppercase tracking-tighter">Profil</span>
+</a>
+</nav>
+<!-- Floating Action Button (FAB) - Following context rules for "Inspirasjon" screen -->
+<!-- Not rendered as it conflicts with "Explore" primary navigation unless it was "Add Recipe" -->
+</body></html>
